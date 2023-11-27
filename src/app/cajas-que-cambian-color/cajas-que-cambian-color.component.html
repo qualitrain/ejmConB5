@@ -1,0 +1,8 @@
+<div class="row">
+    @for(cajaI of cajas; track i; let i=$index){
+        <div class="{{cajaI}} text-white col-12 col-sm-1 m-1 p-3 text-center cajita" 
+             (click)="cambiarColor(i)" (mousedown)="ignorarEvento($event)">
+            caja {{i + 1}}
+        </div>
+    }
+</div>
