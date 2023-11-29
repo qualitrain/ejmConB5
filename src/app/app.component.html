@@ -1,21 +1,66 @@
 <div class="container">
   <h2 class="text-center">{{titulo}}</h2>
-  <div class="row gx-5">
-    <h3 class="text-primary text-center">ListaB5Component</h3>
-    <div class="mt-3 text-primary col bg-primary bg-opacity-10 p-2 rounded">
-      <app-lista-b5></app-lista-b5>
-    </div>
-    <div class="mt-3 text-primary col bg-info  bg-opacity-10 p-2 ms-1 rounded">
-      <app-lista-b5></app-lista-b5>
-    </div>
-    <hr class="mt-3 mb-3">
-  </div>
-  <div class="row gx-5">
-    <h3 class="text-danger text-center">Ejercicio</h3>
-    <div class="mt-3 text-primary col bg-primary bg-opacity-10 p-2 rounded">
-      <app-cajas-que-cambian-color></app-cajas-que-cambian-color>
-    </div>
 
-  </div>
+  @if(ejm_directiva_for_listaB5_on){
+    <div class="row gx-5">
+      <h3 class="text-primary text-center">ListaB5</h3>
+      <p class="text-secondary text-center">Ejemplo de uso de directivas for y de interpolación</p>
+      <div class="mt-3 text-primary col bg-primary bg-opacity-10 p-2 rounded">
+        <app-lista-b5></app-lista-b5>
+      </div>
+      <div class="mt-3 text-primary col bg-info  bg-opacity-10 p-2 ms-1 rounded">
+        <app-lista-b5></app-lista-b5>
+      </div>
+      <hr class="mt-3 mb-3">
+    </div>
+  }
+
+  @if(ejr_for_estado_componente_on){
+    <div class="row gx-5">
+      <h3 class="text-danger text-center">Ejercicio</h3>
+      <p class="text-secondary">
+        Hacer un componente que despliegue un grupo de cajas que cambien de color al recibir 
+        un click. Debe evitarse que el click genere efectos adicionales sobre las cajas, como 
+        activar la selección de texto.
+      </p>
+      <div class="mt-3 text-primary col bg-primary bg-opacity-10 p-2 rounded">
+        <app-cajas-que-cambian-color></app-cajas-que-cambian-color>
+      </div>
+      <hr class="mt-3 mb-3">
+    </div>   
+  }
+
+  @if(ejm_param_entrada_seleccionador_on){
+    <div class="row gx-5">
+      <h3 class="text-primary text-center">Seleccionador</h3>
+      <p class="text-secondary"> Ejemplo de componente que recibe parámetros desde el componente que lo
+        invoca. También muestra el manejo de valores por defecto, en caso de que 
+        sea invocado sin dar valores a sus parámetros.
+      </p>
+      <div class="mt-3 text-primary col bg-secondary  bg-opacity-10 p-2 ms-1 rounded
+                 d-flex flex-column justify-content-center">
+        <app-seleccionador paramNombre="taller" 
+        paramEtiquetas="Cocina,Electricidad,Pintura,Artes Plasticas" 
+        paramValores="C,E,P,AP"
+        paramConBorde="true"
+        paramMostrarValores="true"></app-seleccionador>
+      </div>
+      <div class="mt-3 text-primary col bg-info  bg-opacity-25 p-2 ms-1 rounded
+        d-flex flex-column justify-content-center">
+        <app-seleccionador></app-seleccionador>
+      </div>
+      <div class="mt-3 text-primary col bg-primary  bg-opacity-25 p-2 ms-1 rounded
+        d-flex flex-column justify-content-center">
+        <app-seleccionador  paramNombre="servicio" 
+        paramEtiquetas="Desayunos,Comidas,Uniformes,Biblioteca,Sala Computo" 
+        paramValores="D,C,U,B,SC"
+        paramConBorde="true"
+        paramMostrarValores="false"
+        paramTipo ="checkbox"></app-seleccionador>
+      </div>
+      <hr class="mt-3 mb-3">
+    </div>
+  }
+
 </div>
 

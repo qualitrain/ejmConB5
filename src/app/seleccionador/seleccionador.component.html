@@ -1,0 +1,33 @@
+<div [class.border] ="layout.conBorde" 
+     [class.border-primary] ="layout.conBorde" 
+     class="bg-light rounded p-2">
+    <p class="text-primary mb-2">Seleccione 
+        @if(layout.tipo == 'checkbox'){
+            <span>uno o m&aacute;s</span>
+            {{campo.nombre}}s:
+        }
+        @else {
+            <span>un</span>
+            {{campo.nombre}}:
+        }
+    </p>
+    @for(opcionI of campo.etiquetas; track i; let i=$index){
+        <div class="form-check">
+            @if(layout.tipo == 'checkbox'){
+                <input type="checkbox" class="form-check-input" name="{{campo.nombre}}" 
+                id="id{{opcionI}}" value="{{campo.valores[i]}}">                   
+            }
+            @else {
+                <input type="radio" class="form-check-input" name="{{campo.nombre}}" 
+                id="id{{opcionI}}" value="{{campo.valores[i]}}">
+            }
+
+            <label class="form-check-label" for="id{{opcionI}}">
+                {{opcionI | titlecase}}
+                @if(layout.mostrarValores){
+                    <span>({{campo.valores[i]}})</span>
+                } 
+            </label>
+        </div>
+    }
+</div>
