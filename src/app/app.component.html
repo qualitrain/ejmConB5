@@ -62,5 +62,25 @@
     </div>
   }
 
+  @if(ejr_params_carrusel_on){
+    <div class="row gx-5">
+      <h3 class="text-danger text-center">Ejercicio</h3>
+      <p class="text-secondary"> Despliegue un par de instancias de un componente Carrusel,
+        que implemente alguna implementación de Bootstrap. El componente debe poder recibir
+        como parámetros la lista de nombres de archivos de imagen que se deplegarán con el 
+        mecionado carrusel.
+      </p>
+      <div class="mt-3 text-primary col p-2 ms-1">
+        <app-ejr-carrusel paramPrimeraImagen="1"></app-ejr-carrusel>
+      </div>
+      <div class="mt-3 text-primary col p-2 ms-1">
+        <app-ejr-carrusel paramPrimeraImagen="2"
+         paramImagenes="DSC_8857.JPG,DSC_8865.JPG,DSC_8867.JPG,DSC_8870.JPG,DSC_8876.JPG,DSC_9042.JPG">
+        </app-ejr-carrusel>
+      </div>
+      <hr class="mt-3 mb-3">
+    </div>
+  }
+
 </div>
 

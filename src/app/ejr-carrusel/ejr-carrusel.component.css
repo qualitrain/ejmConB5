@@ -1,0 +1,9 @@
+.elegida img{
+    border-radius: 50% 50% 50% 50%;
+}
+.elegida{
+    background-color: black;
+}
+.carousel-item img{
+    border: 1px solid hsl(200,20%,80%);
+}
