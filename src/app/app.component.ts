@@ -6,6 +6,7 @@ import { CajasQueCambianColorComponent } from './cajas-que-cambian-color/cajas-q
 import { SeleccionadorComponent } from './seleccionador/seleccionador.component';
 import { EjrCarruselComponent } from './ejr-carrusel/ejr-carrusel.component';
 import { EditorPersonasComponent }from './editor-personas/editor-personas.component';
+import { EjrCajaTxtContCaracComponent } from './ejr-caja-txt-cont-carac/ejr-caja-txt-cont-carac.component';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,8 @@ import { EditorPersonasComponent }from './editor-personas/editor-personas.compon
     CajasQueCambianColorComponent, 
     SeleccionadorComponent, 
     EjrCarruselComponent,
-    EditorPersonasComponent
+    EditorPersonasComponent,
+    EjrCajaTxtContCaracComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -27,4 +29,5 @@ export class AppComponent {
   ejm_param_entrada_seleccionador_on=false;
   ejr_params_carrusel_on=false;
   ejm_binding_bidireccional_ngModel_editorPersonas_on=true;
+  ejr_binding_bidireccional_CajaTxtContCarac_on=true;
 }

@@ -1,0 +1,16 @@
+<div class="mb-3">
+    <label for="{{idCaja}}" class="form-label">Mensaje</label>
+    <textarea class="form-control" id="{{idCaja}}" rows="3" 
+              [(ngModel)]="mensaje" (input)="validarLongitud($event)">       
+    </textarea>
+</div>
+  <span class="text-dark">Tamaño mensaje:</span>&nbsp;
+  <span class="contadorCars fw-bold">{{mensaje.length}}</span>/{{limiteMensaje}}
+  &nbsp;
+  <span class="fw-bold" 
+        [class.text-dark]="(mensaje.length/limiteMensaje*100)<=60"
+        [class.text-warning]="(mensaje.length/limiteMensaje*100)>60"
+        [class.text-danger]="(mensaje.length/limiteMensaje*100)>80"
+       >
+    {{ mensaje.length/limiteMensaje | percent }}  
+  </span>

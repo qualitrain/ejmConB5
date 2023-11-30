@@ -86,7 +86,7 @@
     <div class="row gx-5">
       <h3 class="text-primary text-center">EditorPersonas</h3>
       <p class="text-secondary"> Ejemplo de componente que implementa un binding
-        bidireccional usando ngModel
+        bidireccional usando ngModel.
       </p>
       <div class="mt-3 text-primary col bg-secondary  bg-opacity-10 p-2 ms-1 rounded">
         <app-editor-personas></app-editor-personas>
@@ -94,6 +94,30 @@
       <hr class="mt-3 mb-3">
     </div>
   }
+
+  @if(ejr_binding_bidireccional_CajaTxtContCarac_on){
+    <div class="row gx-5">
+      <h3 class="text-danger text-center">Ejercicio</h3>
+      <p class="text-secondary"> Caja de texto que cuenta y limita la longitud de un mensaje. 
+        Elabore 3 instancias en las que por medio de parámetros se pueda configurar el tamaño
+        máximo de mensaje permitido. La caja debe mostrar la cantidad de caracteres capturados,
+        el porcentaje del límite cubierto en negro, amarillo o rojo según se tenga una cantidad
+        de caracteres por hast el 60% (negro), por arriba y hasta el 80% (amarillo) y por encima
+        (rojo).
+      </p>
+      <div class="mt-3 text-primary col p-2 ms-1">
+        <app-ejr-caja-txt-cont-carac paramLimiteMsg="256"></app-ejr-caja-txt-cont-carac>
+      </div>
+      <div class="mt-3 text-primary col p-2 ms-1">
+        <app-ejr-caja-txt-cont-carac paramLimiteMsg="128"></app-ejr-caja-txt-cont-carac>
+      </div>
+      <div class="mt-3 text-primary col p-2 ms-1">
+        <app-ejr-caja-txt-cont-carac></app-ejr-caja-txt-cont-carac>
+      </div>
+      <hr class="mt-3 mb-3">
+    </div>
+  }
+
 
 </div>
 
