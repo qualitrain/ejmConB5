@@ -23,5 +23,9 @@ export class EditorPersonasComponent {
     }
     this.funcionActual = "Alta de Personas";
   }
-
+  reiniciarFormulario(){
+    this.persona.apPaterno = "Ap. Paterno";
+    this.persona.apMaterno = "Ap. Materno";
+    this.persona.nombres = "Nombre(s)"
+  }
 }

@@ -21,6 +21,9 @@
        class="form-control" aria-describedby="helpNombres">
       <small id="helpNombres" class="text-muted">Dato obligatorio</small>
     </div>
+    <div class="my-3">
+      <button class="btn btn-primary" (click)="reiniciarFormulario()">Reiniciar</button>
+    </div>
     <p><strong class="text-success">Nombre completo: <br>
         <span class="text-warning">   {{persona.nombres}}   </span>
         <span class="text-secondary"> {{persona.apPaterno}} </span>

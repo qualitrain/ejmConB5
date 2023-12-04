@@ -1,9 +1,9 @@
 <div class="container">
-  <h2 class="text-center">{{titulo}}</h2>
+  <h2 class="text-center my-4 text-primary">{{titulo}}</h2>
 
-  @if(ejm_directiva_for_listaB5_on){
+  @if(ejm_directiva_for_interpolacion_listaB5_on){
     <div class="row gx-5">
-      <h3 class="text-primary text-center">ListaB5</h3>
+      <h3 class="text-success text-center">ListaB5</h3>
       <p class="text-secondary text-center">Ejemplo de uso de directivas for y de interpolación</p>
       <div class="mt-3 text-primary col bg-primary bg-opacity-10 p-2 rounded">
         <app-lista-b5></app-lista-b5>
@@ -11,6 +11,35 @@
       <div class="mt-3 text-primary col bg-info  bg-opacity-10 p-2 ms-1 rounded">
         <app-lista-b5></app-lista-b5>
       </div>
+      
+      <div class="row my-3">
+        <small class="text-muted">
+            Ejemplo del uso del 
+            <span class="font-italic font-weight-bold text-danger">interpolation binding</span>. 
+            <ul>
+              <li>
+                Cada instancia del componente lee un arreglo declarado en su controlador y muestra sus valores 
+                usando expresiones del tipo 
+                <code class="font-weight-bold">&#123;&#123; </code> 
+                <code class="font-weight-bold">opciones[0] &#125;&#125; </code> y  
+                <code class="font-weight-bold">&#123;&#123; </code> 
+                <code class="font-weight-bold">opcionI  &#125;&#125;</code> 
+              </li>
+              <li>
+                Se usa la directiva de control 
+                <code class="font-weight-bold">
+                  &#64;for( opcionI of opciones2; track opcionI; let idx = $index, esPar = $even)
+                </code>
+              </li>
+              <li>
+                Se hace uso de diversas clases del 
+                <span class="font-italic">framework </span>  
+                <code>Bootstrap 5</code>.
+              </li>
+            </ul>
+        </small>
+      </div>
+
       <hr class="mt-3 mb-3">
     </div>
   }
@@ -30,11 +59,11 @@
     </div>   
   }
 
-  @if(ejm_param_entrada_seleccionador_on){
+  @if(ejm_param_entrada_y_classBinding_seleccionador_on){
     <div class="row gx-5">
-      <h3 class="text-primary text-center">Seleccionador</h3>
+      <h3 class="text-success text-center">Seleccionador</h3>
       <p class="text-secondary"> Ejemplo de componente que recibe parámetros desde el componente que lo
-        invoca. También muestra el manejo de valores por defecto, en caso de que 
+        invoca. También muestra el uso de valores por defecto, en caso de que 
         sea invocado sin dar valores a sus parámetros.
       </p>
       <div class="mt-3 text-primary col bg-secondary  bg-opacity-10 p-2 ms-1 rounded
@@ -58,7 +87,52 @@
         paramMostrarValores="false"
         paramTipo ="checkbox"></app-seleccionador>
       </div>
-      <hr class="mt-3 mb-3">
+      
+      <div>
+        <small class="text-muted">
+          El componente permite personalizar:
+          <ol>
+            <li>
+              Borde 
+            </li>
+            <li>
+              El despliegue de valores de cada opci&oacute;n
+            </li>
+            <li>
+              Si se desea usar radio botones o botones de tipo chekbox 
+            </li>
+            <li>
+              El nombre del campo
+            </li>
+            <li>
+              Los valores posibles a elegir
+            </li>
+          </ol> 
+          Utiliza
+          <span class="font-italic font-weight-bold text-danger">directivas estructurales</span>. 
+          En este caso: <br>
+          <ul>
+            <li>
+              <code class="font-weight-bold">&#64;for</code> (with index), 
+            </li>
+            <li>
+              <code class="font-weight-bold">&#64;if</code> y 
+            </li>
+            <li>
+              <code class="font-weight-bold">&#64;else</code>.
+            </li>
+          </ul>
+          Se utiliza 
+          <span class="font-italic font-weight-bold">class binding</span>
+          para el dibujo condicional del borde.<br>
+          En general, el componente explota el 
+          <strong>renderizado condicional</strong> 
+          con base en datos residentes en su controlador.
+        </small>
+        <hr class="mt-3 mb-3">
+      </div>
+
+
     </div>
   }
 
@@ -84,11 +158,11 @@
 
   @if(ejm_binding_bidireccional_ngModel_editorPersonas_on){
     <div class="row gx-5">
-      <h3 class="text-primary text-center">EditorPersonas</h3>
+      <h3 class="text-success text-center mb-3">EditorPersonas</h3>
       <p class="text-secondary"> Ejemplo de componente que implementa un binding
         bidireccional usando ngModel.
       </p>
-      <div class="mt-3 text-primary col bg-secondary  bg-opacity-10 p-2 ms-1 rounded">
+      <div class="mt-3 text-primary col-12 col-sm-6 col-md-4 bg-secondary  bg-opacity-10 p-2 ms-1 rounded">
         <app-editor-personas></app-editor-personas>
       </div>
       <hr class="mt-3 mb-3">

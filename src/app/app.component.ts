@@ -23,11 +23,17 @@ import { EjrCajaTxtContCaracComponent } from './ejr-caja-txt-cont-carac/ejr-caja
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  titulo = 'Proyecto demo de Angular 17';
-  ejm_directiva_for_listaB5_on=false;
-  ejr_for_estado_componente_on=false;
-  ejm_param_entrada_seleccionador_on=false;
-  ejr_params_carrusel_on=false;
-  ejm_binding_bidireccional_ngModel_editorPersonas_on=true;
-  ejr_binding_bidireccional_CajaTxtContCarac_on=true;
+  titulo = 'Demo de Angular 17 [ejmConB5]';
+
+  ejm_directiva_for_interpolacion_listaB5_on         :boolean=false;
+  ejr_for_estado_componente_on                       :boolean=false;
+
+  ejm_param_entrada_y_classBinding_seleccionador_on  :boolean=false;
+  ejr_params_carrusel_on                             :boolean=false;
+
+  ejm_binding_bidireccional_ngModel_editorPersonas_on:boolean=true;
+  ejr_binding_bidireccional_CajaTxtContCarac_on      :boolean=true;
+
+  ejm_elStyleBindingYelEventoClickOn           :boolean=true;
+ 
 }
