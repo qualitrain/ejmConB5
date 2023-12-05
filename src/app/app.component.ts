@@ -7,6 +7,7 @@ import { SeleccionadorComponent } from './seleccionador/seleccionador.component'
 import { EjrCarruselComponent } from './ejr-carrusel/ejr-carrusel.component';
 import { EditorPersonasComponent }from './editor-personas/editor-personas.component';
 import { EjrCajaTxtContCaracComponent } from './ejr-caja-txt-cont-carac/ejr-caja-txt-cont-carac.component';
+import { SelecColorComponent } from './selec-color/selec-color.component';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,8 @@ import { EjrCajaTxtContCaracComponent } from './ejr-caja-txt-cont-carac/ejr-caja
     SeleccionadorComponent, 
     EjrCarruselComponent,
     EditorPersonasComponent,
-    EjrCajaTxtContCaracComponent
+    EjrCajaTxtContCaracComponent,
+    SelecColorComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -31,9 +33,9 @@ export class AppComponent {
   ejm_param_entrada_y_classBinding_seleccionador_on  :boolean=false;
   ejr_params_carrusel_on                             :boolean=false;
 
-  ejm_binding_bidireccional_ngModel_editorPersonas_on:boolean=true;
-  ejr_binding_bidireccional_CajaTxtContCarac_on      :boolean=true;
+  ejm_binding_bidireccional_ngModel_editorPersonas_on:boolean=false;
+  ejr_binding_bidireccional_CajaTxtContCarac_on      :boolean=false;
 
-  ejm_elStyleBindingYelEventoClickOn           :boolean=true;
+  ejm_elStyleBindingYelEventoClick_on                :boolean=true;
  
 }
