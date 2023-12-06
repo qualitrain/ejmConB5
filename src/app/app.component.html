@@ -214,6 +214,39 @@
     </div>
   }
 
+  @if(ejm_componentesQueDevuelvenValores_on){
+    <div class="row gx-5">
+      <h3 class="text-success text-center mb-3">ContenedorSelectAlternativa/SelectAlternativa</h3>
+      <p class="text-secondary"> Ejemplo de componente que devuelve los valores seleccionados a través de él
+      </p>
+      <div class="mt-3 col px-1">
+        <app-contenedor-select-alternativa></app-contenedor-select-alternativa>
+      </div>
+
+      <div class="text-info text-muted mt-3 text-info text-justify">
+        <small>
+          <ul>
+            <li>
+              <strong>El componente de selecci&oacute;n recibe objetos</strong> que provienen del componente (usando el decorador  
+              <code class="font-weight-bold">&#64;Input()</code>).
+            </li>
+            <li>
+              El componente <strong>publica los cambios de valor</strong> por medio del uso de un objeto emisor de eventos
+              <code class="font-weight-bold">EventEmitter&lt;string&gt;</code> y del decorador
+              <code class="font-weight-bold">&#64;Output</code>.
+            </li>
+            <li>
+              Tambi&eacute;n <strong>se escucha el evento </strong> 
+              publicado por el componente. &Eacute;sto le permite recibir los valores devueltos por el componente
+              (el seleccionador).
+            </li>
+          </ul>
+        </small>
+    </div>
+
+      <hr class="mt-3 mb-3">
+    </div>
+  }
 
 </div>
 

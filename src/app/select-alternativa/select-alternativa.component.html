@@ -1,0 +1,35 @@
+<div [class.border]="layout.conBorde" 
+     [class.border-primary]="layout.conBorde" 
+     class="bg-light rounded p-2" 
+     (change)="mostrarCambioValores($event)">
+    <p class="text-primary mb-2">Seleccione 
+        @if(layout.tipo == 'checkbox'){
+            <span>una o m&aacute;s opciones<br> </span>
+            <strong>{{campo.nombre}}</strong>
+            <span>s:</span>
+        }
+        @else {
+            <strong>{{campo.nombre}}</strong>
+            <span>:</span>
+        }
+    </p>
+    @for(opcionI of campo.etiquetas; track i; let i=$index){
+        <div class="form-check" >
+            @if(layout.tipo == 'checkbox'){
+                <input type="checkbox" class="form-check-input" name="{{campo.nombre}}" 
+                id="id{{opcionI}}" value="{{i}}" >
+            }
+            @else {
+                <input type="radio" class="form-check-input" name="{{campo.nombre}}" 
+                id="id{{opcionI}}" value="{{i}}">
+            }
+            <label class="form-check-label" for="id{{opcionI}}">
+                {{opcionI | titlecase}} 
+                @if(layout.mostrarValores){
+                    <span>({{campo.valores[i]}})</span>
+                }
+            </label>
+        </div>
+    }
+</div>
+

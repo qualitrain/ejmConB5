@@ -1,0 +1,32 @@
+<div class="border p-2 rounded">
+    <h5>Contenedor</h5>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="tipoSeleccion" id="inlineRadio1" value="radio" 
+              (click)="actualizarTipoSeleccion(inRadTipoSelRad.value)" #inRadTipoSelRad>
+        <label class="form-check-label" for="inlineRadio1">Radio Button</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="tipoSeleccion" id="inlineRadio2" value="checkbox" checked
+              (click)="actualizarTipoSeleccion(inRadTipoSelCheck.value)" #inRadTipoSelCheck>
+        <label class="form-check-label" for="inlineRadio2">Checkbox</label>
+    </div>
+
+    <div class="row">
+        <div class="col-5">
+            <app-select-alternativa 
+                (eeCambioDeValores)="valorPelicula = $event" 
+                [campo]="campoPelicula" 
+                [layout]="layoutPelicula">
+            </app-select-alternativa>
+        </div>
+        <div class="col-sm-3  m-2 text-center bg-warning bg-opacity-25 shadow rounded">
+            <br>
+            <strong class="text-secondary h4">Valor Elegido:</strong> 
+            <br>
+            <br>
+            <span class="text-danger h5">{{valorPelicula}}</span>
+            <br>
+            <br>
+        </div>
+    </div>
+</div>

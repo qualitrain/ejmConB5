@@ -8,7 +8,7 @@ import { EjrCarruselComponent } from './ejr-carrusel/ejr-carrusel.component';
 import { EditorPersonasComponent }from './editor-personas/editor-personas.component';
 import { EjrCajaTxtContCaracComponent } from './ejr-caja-txt-cont-carac/ejr-caja-txt-cont-carac.component';
 import { SelecColorComponent } from './selec-color/selec-color.component';
-
+import { ContenedorSelectAlternativaComponent } from './contenedor-select-alternativa/contenedor-select-alternativa.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -19,7 +19,8 @@ import { SelecColorComponent } from './selec-color/selec-color.component';
     EjrCarruselComponent,
     EditorPersonasComponent,
     EjrCajaTxtContCaracComponent,
-    SelecColorComponent
+    SelecColorComponent,
+    ContenedorSelectAlternativaComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -36,6 +37,10 @@ export class AppComponent {
   ejm_binding_bidireccional_ngModel_editorPersonas_on:boolean=false;
   ejr_binding_bidireccional_CajaTxtContCarac_on      :boolean=false;
 
-  ejm_elStyleBindingYelEventoClick_on                :boolean=true;
+  ejm_elStyleBindingYelEventoClick_on                :boolean=false;
+ 
+  ejm_componentesQueDevuelvenValores_on              :boolean=true;
+
+
  
 }
