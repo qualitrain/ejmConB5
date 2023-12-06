@@ -1,0 +1,6 @@
+  <select class="form-select form-select-sm" aria-label="Small select example" (change)="procesarEleccion($event)">
+    <option selected>Elige un estado</option>
+    @for(edoI of estados; track i; let i=$index){
+        <option value="{{i}}">{{edoI}}</option>
+    }
+  </select>

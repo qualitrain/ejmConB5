@@ -9,6 +9,7 @@ import { EditorPersonasComponent }from './editor-personas/editor-personas.compon
 import { EjrCajaTxtContCaracComponent } from './ejr-caja-txt-cont-carac/ejr-caja-txt-cont-carac.component';
 import { SelecColorComponent } from './selec-color/selec-color.component';
 import { ContenedorSelectAlternativaComponent } from './contenedor-select-alternativa/contenedor-select-alternativa.component';
+import { EjrContenedorListBoxComponent } from './ejr-contenedor-list-box/ejr-contenedor-list-box.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -20,7 +21,8 @@ import { ContenedorSelectAlternativaComponent } from './contenedor-select-altern
     EditorPersonasComponent,
     EjrCajaTxtContCaracComponent,
     SelecColorComponent,
-    ContenedorSelectAlternativaComponent
+    ContenedorSelectAlternativaComponent,
+    EjrContenedorListBoxComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -40,7 +42,6 @@ export class AppComponent {
   ejm_elStyleBindingYelEventoClick_on                :boolean=false;
  
   ejm_componentesQueDevuelvenValores_on              :boolean=true;
+  ejr_componentesQueDevuelvenVals_listbox_on         :boolean=true;
 
-
- 
 }
