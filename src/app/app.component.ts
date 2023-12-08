@@ -10,6 +10,7 @@ import { EjrCajaTxtContCaracComponent } from './ejr-caja-txt-cont-carac/ejr-caja
 import { SelecColorComponent } from './selec-color/selec-color.component';
 import { ContenedorSelectAlternativaComponent } from './contenedor-select-alternativa/contenedor-select-alternativa.component';
 import { EjrContenedorListBoxComponent } from './ejr-contenedor-list-box/ejr-contenedor-list-box.component';
+import { TogglerComponent } from './toggler/toggler.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -22,7 +23,8 @@ import { EjrContenedorListBoxComponent } from './ejr-contenedor-list-box/ejr-con
     EjrCajaTxtContCaracComponent,
     SelecColorComponent,
     ContenedorSelectAlternativaComponent,
-    EjrContenedorListBoxComponent
+    EjrContenedorListBoxComponent,
+    TogglerComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -41,7 +43,10 @@ export class AppComponent {
 
   ejm_elStyleBindingYelEventoClick_on                :boolean=false;
  
-  ejm_componentesQueDevuelvenValores_on              :boolean=true;
-  ejr_componentesQueDevuelvenVals_listbox_on         :boolean=true;
+  ejm_componentesQueDevuelvenValores_on              :boolean=false;
+  ejr_componentesQueDevuelvenVals_listbox_on         :boolean=false;
+
+  ejm_EnvioDeHtmlAcomponente_toggler_on              :boolean=true;
+  ejr_EnvioDeHtmlAcomponente_acordeon_on             :boolean=false;
 
 }

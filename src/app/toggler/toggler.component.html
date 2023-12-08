@@ -1,0 +1,28 @@
+<p class="d-inline-flex gap-1">
+    <a class="btn btn-primary mr-1" data-bs-toggle="collapse" href="#contenido1" 
+        role="button" aria-expanded="false" aria-controls="contenido1">{{etiquetaUno}}</a>
+
+    <button class="btn btn-dark mr-1" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#contenido2" aria-expanded="false" 
+            aria-controls="contenido2">{{etiquetaDos}}</button>
+
+    <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" 
+            data-bs-target=".multi-collapse" aria-expanded="false" 
+            aria-controls="contenido1 contenido2">Switchear</button>
+</p>
+<div class="row">
+    <div class="col">
+        <div class="collapse multi-collapse" id="contenido1">
+            <div class="card card-body">
+                <ng-content select="[uno]"></ng-content>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="collapse multi-collapse" id="contenido2">
+            <div class="card card-body">
+                <ng-content select="[dos]"></ng-content>
+            </div>
+        </div>
+    </div>
+</div>

@@ -260,5 +260,51 @@
     </div>
   }
 
+  @if(ejm_EnvioDeHtmlAcomponente_toggler_on){
+    <div class="row gx-5">
+      <h3 class="text-success text-center mb-3">Toggler</h3>
+      <p class="text-secondary"> Ejemplo de componente que recibe c&oacute;digo html como entrada
+      </p>
+      <div class="mt-3 col px-1">
+        <app-toggler  etiquetaUno="Destinos" etiquetaDos="Instrucciones">
+          <div uno>
+            <span class="text-primary  fw-bold">Destinos disponibles:</span>
+            <ol>
+                <li>
+                    Acapulco
+                </li>
+                <li>
+                    Veracruz
+                </li>
+                <li>
+                    Chiapas
+                </li>
+            </ol>
+          </div>
+          <div dos>
+              <div class="text-warning fw-bold mb-2">C&oacute;mo obtener mayor informaci&oacute;n</div>
+              Para explorar los destinos puede enviarnos un correo con el destino de inter&eacute;s 
+              y sus preferencias en t&eacute;rminos de actividades o visitas y nosotros lo contactaremos 
+              proporcion&aacute;ndole informaci&oacute;n detallada.
+          </div>
+        </app-toggler>
+      </div>
+      <hr class="mt-3 mb-3">
+    </div>
+  }
+
+  @if(ejr_EnvioDeHtmlAcomponente_acordeon_on){
+    <div class="row gx-5">
+      <h3 class="text-danger text-center">Ejercicio</h3>
+      <p class="text-secondary"> Acorde&oacute;n: Componente que expande o contrae contenidos recibidos
+      </p>
+      <div class="mt-3 text-primary col p-2 ms-1">
+        <!--app-</app-->
+      </div>
+      <hr class="mt-3 mb-3">
+    </div>
+  }
+
+
 </div>
 
