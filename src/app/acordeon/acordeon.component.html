@@ -1,0 +1,82 @@
+<div class="accordion" id="{{id_acordeon}}">
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+                [attr.data-bs-target]="'#' + idsElemento[0]" 
+                aria-expanded="true" 
+                [attr.aria-controls]="idsElemento[0]">
+          {{nombresElementos[0]}}
+        </button>
+      </h2>
+      <div id="{{idsElemento[0]}}" class="accordion-collapse collapse" data-bs-parent="#idAcordeon"
+           [attr.data-bs-parent]="'#' + id_acordeon" 
+           [class.show]="mostrarElemAlInicio[0]">
+        <div class="accordion-body">
+          <ng-content select="[uno]"></ng-content>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+              [attr.data-bs-target]="'#' + idsElemento[1]" 
+               aria-expanded="false" 
+               [attr.aria-controls]="idsElemento[1]">
+          {{nombresElementos[1]}}
+        </button>
+      </h2>
+      <div id="{{idsElemento[1]}}"  class="accordion-collapse collapse" data-bs-parent="#idAcordeon" 
+                 [attr.data-bs-parent]="'#' + id_acordeon"
+                 [class.show]="mostrarElemAlInicio[1]">
+        <div class="accordion-body">
+          <ng-content select="[dos]"></ng-content>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                [attr.data-bs-target]="'#' + idsElemento[2]" 
+                aria-expanded="false" 
+                [attr.aria-controls]="idsElemento[2]">
+          {{nombresElementos[2]}}
+        </button>
+      </h2>
+      <div  id="{{idsElemento[2]}}"  class="accordion-collapse collapse" data-bs-parent="#idAcordeon" 
+                [attr.data-bs-parent]="'#' + id_acordeon"
+                [class.show]="mostrarElemAlInicio[2]">
+        <div class="accordion-body">
+          <ng-content select="[tres]"></ng-content>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- 
+<div class="accordion" id="{{id_acordeon}}">
+  @for(idElemI of idsElemento; track i; let i = $index){
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+                [attr.data-bs-target]="'#' + idElemI" 
+                aria-expanded="true" 
+                [attr.aria-controls]="idElemI">
+          {{nombresElementos[i]}}
+        </button>
+      </h2>
+
+      <div id="{{idElemI}}" class="accordion-collapse collapse"
+            [class.show]="mostrarElemAlInicio[i]" 
+            [attr.data-bs-parent]="'#' + id_acordeon">
+        <div class="accordion-body">
+          <! -- No funciona en modo dinámico: La alternativa es usar ng-template - ->
+          <ng-content [select]="'['+secciones[i]+']'"></ng-content>
+        </div>
+      </div>
+ 
+    </div>
+  }
+</div>
+ -->

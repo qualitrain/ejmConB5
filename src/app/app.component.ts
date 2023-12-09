@@ -11,10 +11,12 @@ import { SelecColorComponent } from './selec-color/selec-color.component';
 import { ContenedorSelectAlternativaComponent } from './contenedor-select-alternativa/contenedor-select-alternativa.component';
 import { EjrContenedorListBoxComponent } from './ejr-contenedor-list-box/ejr-contenedor-list-box.component';
 import { TogglerComponent } from './toggler/toggler.component';
+import { AcordeonComponent } from './acordeon/acordeon.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, 
+  imports: [
+    CommonModule, RouterOutlet, 
     ListaB5Component, 
     CajasQueCambianColorComponent, 
     SeleccionadorComponent, 
@@ -24,7 +26,8 @@ import { TogglerComponent } from './toggler/toggler.component';
     SelecColorComponent,
     ContenedorSelectAlternativaComponent,
     EjrContenedorListBoxComponent,
-    TogglerComponent
+    TogglerComponent,
+    AcordeonComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -47,6 +50,6 @@ export class AppComponent {
   ejr_componentesQueDevuelvenVals_listbox_on         :boolean=false;
 
   ejm_EnvioDeHtmlAcomponente_toggler_on              :boolean=true;
-  ejr_EnvioDeHtmlAcomponente_acordeon_on             :boolean=false;
+  ejr_EnvioDeHtmlAcomponente_acordeon_on             :boolean=true;
 
 }
