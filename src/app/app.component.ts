@@ -12,6 +12,8 @@ import { ContenedorSelectAlternativaComponent } from './contenedor-select-altern
 import { EjrContenedorListBoxComponent } from './ejr-contenedor-list-box/ejr-contenedor-list-box.component';
 import { TogglerComponent } from './toggler/toggler.component';
 import { AcordeonComponent } from './acordeon/acordeon.component';
+import { AcordeonAvzComponent } from './acordeon-avz/acordeon-avz.component';
+import { PlantillaNgDirective } from './acordeon-avz/plantilla-ng.directive';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -27,7 +29,9 @@ import { AcordeonComponent } from './acordeon/acordeon.component';
     ContenedorSelectAlternativaComponent,
     EjrContenedorListBoxComponent,
     TogglerComponent,
-    AcordeonComponent
+    AcordeonComponent,
+    AcordeonAvzComponent,
+    PlantillaNgDirective
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -35,7 +39,7 @@ import { AcordeonComponent } from './acordeon/acordeon.component';
 export class AppComponent {
   titulo = 'Demo de Angular 17 [ejmConB5]';
 
-  ejm_directiva_for_interpolacion_listaB5_on         :boolean=false;
+  ejm_directiva_for_interpolacion_listaB5_on         :boolean=true;
   ejr_for_estado_componente_on                       :boolean=false;
 
   ejm_param_entrada_y_classBinding_seleccionador_on  :boolean=false;
@@ -49,7 +53,13 @@ export class AppComponent {
   ejm_componentesQueDevuelvenValores_on              :boolean=false;
   ejr_componentesQueDevuelvenVals_listbox_on         :boolean=false;
 
-  ejm_EnvioDeHtmlAcomponente_toggler_on              :boolean=true;
-  ejr_EnvioDeHtmlAcomponente_acordeon_on             :boolean=true;
+  ejm_EnvioDeHtmlAcomponente_toggler_on              :boolean=false;
+  ejr_EnvioDeHtmlAcomponente_acordeon_on             :boolean=false;
+
+  ejr_EnvioDeHtmlAcomponente_acordeonAvz_on          :boolean=true;
+  textos:string[] = ['ejemplo de texto cualquiera', 
+                    'otro texto cualquiera para mostrar la generación dinámica de contenido para alimentar a un componente',
+                    'otro texto más (cualquiera) para mostrar la generación dinámica de contenido para alimentar a un componente'
+                  ]
 
 }

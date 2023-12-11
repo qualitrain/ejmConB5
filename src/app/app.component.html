@@ -15,19 +15,17 @@
       <div class="row my-3">
         <small class="text-muted">
             Ejemplo del uso del 
-            <span class="font-italic font-weight-bold text-danger">interpolation binding</span>. 
+            <span class="font-italic fw-bold text-danger">interpolation binding</span>. 
             <ul>
               <li>
                 Cada instancia del componente lee un arreglo declarado en su controlador y muestra sus valores 
                 usando expresiones del tipo 
-                <code class="font-weight-bold">&#123;&#123; </code> 
-                <code class="font-weight-bold">opciones[0] &#125;&#125; </code> y  
-                <code class="font-weight-bold">&#123;&#123; </code> 
-                <code class="font-weight-bold">opcionI  &#125;&#125;</code> 
+                <code class="fw-bold" ngNonBindable>{{ opciones[0] }}</code> y
+                <code class="fw-bold" ngNonBindable>{{ opcionI }} </code> 
               </li>
               <li>
                 Se usa la directiva de control 
-                <code class="font-weight-bold">
+                <code class="fw-bold">
                   &#64;for( opcionI of opciones2; track opcionI; let idx = $index, esPar = $even)
                 </code>
               </li>
@@ -343,6 +341,61 @@
     </div>
   }
 
-
+  @if(ejr_EnvioDeHtmlAcomponente_acordeonAvz_on){
+    <div class="row gx-5">
+      <h3 class="text-danger text-center">Ejercicio Avanzado</h3>
+      <p class="text-secondary"> Acorde&oacute;nAvz: Componente que expande o contrae una cantidad arbitraria de contenidos recibidos
+      </p>
+      <div class="mt-3 text-primary col p-2 ms-1">
+        <app-acordeon-avz pElementos="Elemento 1,Elemento 2,Elemento 3,Otro contenido,texto A,texto B,texto C"
+                      pExpandir="true,false,false,false,true,false">
+          <div *PlantillaNg> <!-- El asterisco a la izquiera de la directiva de identificación de NgTemplate (PlantillaNg) es un atajo para no declarar explicitamente tags "ng-template"-->
+            <strong>Este es el primer item del cuerpo del acordeón.</strong> 
+            It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. 
+            These classes control the overall appearance, as well as the showing and hiding via CSS transitions. 
+            You can modify any of this with custom CSS or overriding our default variables. 
+            It's also worth noting that just about any HTML can go within the 
+            <code>.accordion-body</code>
+            , though the transition does limit overflow.
+          </div>
+          <div *PlantillaNg> 
+            <strong>Este es el segundo item del cuerpo del acordeón.</strong> 
+            It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. 
+            These classes control the overall appearance, as well as the showing and hiding via CSS transitions. 
+            You can modify any of this with custom CSS or overriding our default variables. 
+            It's also worth noting that just about any HTML can go within the 
+            <code>.accordion-body</code>
+            , though the transition does limit overflow.                   
+          </div>
+          <div *PlantillaNg> 
+            <strong>Este es el tercer item del cuerpo del acordeón.</strong> 
+            It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. 
+            These classes control the overall appearance, as well as the showing and hiding via CSS transitions. 
+            You can modify any of this with custom CSS or overriding our default variables. 
+            It's also worth noting that just about any HTML can go within the 
+            <code>.accordion-body</code>
+            , though the transition does limit overflow.                   
+          </div>
+          <div *PlantillaNg> 
+            <strong>Este es el cuarto item del cuerpo del acordeón.</strong> 
+            It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. 
+            These classes control the overall appearance, as well as the showing and hiding via CSS transitions. 
+            You can modify any of this with custom CSS or overriding our default variables. 
+            It's also worth noting that just about any HTML can go within the 
+            <code>.accordion-body</code>
+            , though the transition does limit overflow.                  
+          </div>
+          @for(textoI of textos;track k;let k=$index){
+            <ng-template PlantillaNg>
+              <div class="alert alert-warning" role="alert">
+                {{textoI}}
+              </div>
+            </ng-template>
+          }
+        </app-acordeon-avz>
+      </div>
+      <hr class="mt-3 mb-3">
+    </div>
+  }
 </div>
 
