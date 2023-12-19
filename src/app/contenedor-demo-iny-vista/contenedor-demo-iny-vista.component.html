@@ -1,0 +1,100 @@
+<div class="my-3" (change) = "configurarPruebaInyecElemDOM($event)">
+    <div class="mr-2">Probar: </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="cbxView" value="true">
+        <label class="form-check-label text-warning fw-bold" for="cbxView">
+            &#64;ViewChild y &#64;ViewChildren
+        </label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="cbxContent" value="true">
+        <label class="form-check-label text-danger fw-bold" for="cbxContent">
+            &#64;ContentChild y &#64;ContentChildren
+        </label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="cbxContDir" value="true">
+        <label class="form-check-label text-secondary fw-bold" for="cbxContDir">
+            &#64;ContentChildren sobre Directiva
+        </label>
+    </div>
+</div>
+
+<div class="row bg-body-tertiary mt-3 rounded-lg">
+    <div class="col  p-2">
+        <app-tarjeta titulo="Chiapas" accion="Reservar" imagen="Chiapas02.jpg" 
+                     debug="true" [demoView]="pruebaInyeccView" 
+                                  [demoContent]="pruebaInyeccContent" 
+                                  [demoContentDirectiva]="pruebaInyeccContDir">
+            <div #Relevante>
+                Ubicado al Sureste de M&eacute;xico es un destino que debe ser visitado, s&iacute; o s&iacute;.
+            </div>
+            <div class="mt-2" #titListaRelevante EsRelevante>Atractivos:</div>
+            <ul #Relevante>
+                <li EsRelevante>Lagunas de Montebello</li>
+                <li>Cascadas de Agua Azul</li>
+                <li EsRelevante>San Cristobal de las Casas</li>
+            </ul>
+        </app-tarjeta>
+    </div>
+    <div class="col p-2">
+        <app-tarjeta titulo="Pastor Alem&aacute;n" accion="Adoptar" imagen="pastor.jfif" 
+                     debug="true" [demoView]="pruebaInyeccView" 
+                                  [demoContent]="pruebaInyeccContent" 
+                                  [demoContentDirectiva]="pruebaInyeccContDir">
+            <div #Relevante EsRelevante>
+                Raza que suelen entrenar y usar los cuerpos de polic&iacute;a y rescate.
+            </div>
+            <div class="mt-2" #titListaRelevante EsRelevante>Caracter&iacute;sticas:</div>
+            <ul #Relevante>
+                <li>Pelaje en tonos amarillo y negro</li>
+                <li EsRelevante>Talla grande</li>
+                <li EsRelevante>Son adecuados para cuidar a los ni&ntilde;os</li>
+            </ul>
+        </app-tarjeta>
+    </div>
+    <div class="col p-2">
+        <app-tarjeta titulo="Par&iacute;s" accion="Reservar" imagen="DSC_8876.JPG" 
+                     debug="true" [demoView]="pruebaInyeccView" 
+                                  [demoContent]="pruebaInyeccContent" 
+                                  [demoContentDirectiva]="pruebaInyeccContDir">
+            <div >
+                Conocida como la ciudad Luz.
+            </div>
+            <div class="mt-2" #titListaRelevante>Comentarios:</div>
+            <ul>
+                <li>El alojamiento es un poco caro</li>
+                <li EsRelevante>La red de transporte p&uacute;blico es muy grande</li>
+                <li EsRelevante>La comida en restaurantes requiere de un buen gu&iacute;a</li>
+                <li>Septiembre es un buen mes para visitarla en cuanto a clima</li>
+            </ul>
+        </app-tarjeta>
+    </div>
+</div>
+
+<div class="text-info text-muted mt-3 text-info text-justify">
+    <small>
+        <strong>El componente inyecta elementos de la vista</strong> usando decoradores
+        <code class="fw-bold">&#64;ViewChild</code>,
+        <code class="fw-bold">&#64;ViewChildren</code>,
+        <code class="fw-bold">&#64;ContentChild</code> y 
+        <code class="fw-bold">&#64;ContentChildren</code>.
+        <br>
+        El componente ejemplifica el uso de una <strong>directiva para identificar elementos a inyectar.</strong> 
+        Esa directiva usa eventos para cambiar momentanemente la apariencia del elemento que la hospeda. <br>
+        Uso de <strong>m&eacute;todos hook </strong> <code class="fw-bold">ngAfterViewInit()</code> y
+        <code class="fw-bold">ngAfterContentInit()</code>.<br>
+        <strong>Modifica</strong> elementos de la <strong>vista, despu&eacute;s de</strong> que ha sido ya <strong>inicializada</strong>. Usa
+        <code class="fw-bold">setTimeout( ()=>this.textosDirEsRelevante = textosDirRelevante.join(", "), 0);</code>.<br>
+        Usa <strong>objetos especiales</strong> para manejo de referencias inyectadas y para uso de directivas:
+        <ul>
+            <li><code class="fw-bold">ElementRef</code></li>
+            <li><code class="fw-bold">QueryList&lt;ElementRef&gt;</code></li>
+            <li><code class="fw-bold">Renderer2</code></li>
+            <li><code class="fw-bold">&#64;Directive</code></li>
+            <li><code class="fw-bold">&#64;HostListener</code></li>
+            <li><code class="fw-bold">&#64;HostBinding</code></li>
+        </ul>
+    </small>
+</div>
+

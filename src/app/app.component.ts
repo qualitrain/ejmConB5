@@ -14,6 +14,7 @@ import { TogglerComponent } from './toggler/toggler.component';
 import { AcordeonComponent } from './acordeon/acordeon.component';
 import { AcordeonAvzComponent } from './acordeon-avz/acordeon-avz.component';
 import { PlantillaNgDirective } from './acordeon-avz/plantilla-ng.directive';
+import { ContenedorDemoInyVistaComponent } from './contenedor-demo-iny-vista/contenedor-demo-iny-vista.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -31,7 +32,8 @@ import { PlantillaNgDirective } from './acordeon-avz/plantilla-ng.directive';
     TogglerComponent,
     AcordeonComponent,
     AcordeonAvzComponent,
-    PlantillaNgDirective
+    PlantillaNgDirective,
+    ContenedorDemoInyVistaComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -39,7 +41,7 @@ import { PlantillaNgDirective } from './acordeon-avz/plantilla-ng.directive';
 export class AppComponent {
   titulo = 'Demo de Angular 17 [ejmConB5]';
 
-  ejm_directiva_for_interpolacion_listaB5_on         :boolean=true;
+  ejm_directiva_for_interpolacion_listaB5_on         :boolean=false;
   ejr_for_estado_componente_on                       :boolean=false;
 
   ejm_param_entrada_y_classBinding_seleccionador_on  :boolean=false;
@@ -56,7 +58,9 @@ export class AppComponent {
   ejm_EnvioDeHtmlAcomponente_toggler_on              :boolean=false;
   ejr_EnvioDeHtmlAcomponente_acordeon_on             :boolean=false;
 
-  ejr_EnvioDeHtmlAcomponente_acordeonAvz_on          :boolean=true;
+  ejm_InyeccionDeElementosDOMdeVistaEnClase_on       :boolean=true;
+
+  ejr_EnvioDeHtmlAcomponente_acordeonAvz_on          :boolean=false;
   textos:string[] = ['ejemplo de texto cualquiera', 
                     'otro texto cualquiera para mostrar la generación dinámica de contenido para alimentar a un componente',
                     'otro texto más (cualquiera) para mostrar la generación dinámica de contenido para alimentar a un componente'

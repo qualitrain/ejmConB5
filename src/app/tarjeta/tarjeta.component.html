@@ -1,0 +1,49 @@
+<div class="card shadow" [style.width]="ancho + 'rem'">
+    <img src="./assets/img/{{imagen}}" class="card-img-top" alt="..." #elemImagen>
+    <div class="card-body">
+        <h5 class="card-title">{{titulo}}</h5>
+        <p class="card-text">
+            <ng-content></ng-content>
+        </p>
+        <a href="{{link}}" class="btn btn-primary" #btnAccion>{{accion}} </a>
+        <a href="#" class="btn btn-info ms-2" #btnAccion>Más Info</a>
+    </div>
+</div>
+
+@if(debugOn && demoViewOn){
+    <div class="bg-warning-subtle p-2 mt-1 rounded border border-warning" 
+         [style.width]="ancho + 'rem'">
+        <div class="fw-bold mb-2">Inyectados desde la Vista:</div>
+        <small>
+            <span class="fw-bold text-warning" >&#64;ViewChildren:</span>
+            <span class="fw-bold">Urls de botones:</span> 
+            {{urlsAccion}}
+        </small><br>
+        <small>
+            <span class="fw-bold text-warning">&#64;ViewChild:</span>
+        </small>
+        <a href={{urlImagen}}>Ver Imagen</a>
+    </div>
+}
+
+@if(debugOn && demoContentOn){
+    <div class="bg-danger-subtle rounded p-2 mt-1 rounded border border-danger" 
+         [style.width]="ancho + 'rem'">
+        <div class="fw-bold mb-2">Inyectados desde ng-content:</div>
+        <small>
+            <span class="fw-bold text-danger">&#64;ContentChild:</span>{{titRelevante}}<br>
+            <span class="fw-bold text-danger">&#64;ContentChildren:</span>
+            {{textRelevante}} ({{elemsRelevantes.length}})
+        </small>
+    </div>
+}
+
+@if(debugOn && demoContentDirectivaOn){   
+    <div class="bg-light p-2 mt-1 rounded border border-secondary" 
+        [style.width]="ancho + 'rem'">
+        <div class="fw-bold mb-2">Inyectados desde ng-content usando directiva '<code>EsRelevante</code>':</div>
+        <small>
+            <span class="fw-bold text-danger">&#64;ContentChildren:</span>{{textosDirEsRelevante}}
+        </small>
+    </div>
+}
