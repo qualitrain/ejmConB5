@@ -75,7 +75,7 @@ export class TarjetaComponent implements AfterViewInit, AfterContentInit, OnChan
   textosDirEsRelevante:string="";
 
   ngOnChanges():void {
-    console.log("***************** ngOnChanges() *****************");
+//    console.log("***************** ngOnChanges() *****************");
     this.prenderOapagarDemos();
   }
 
@@ -103,7 +103,7 @@ export class TarjetaComponent implements AfterViewInit, AfterContentInit, OnChan
   }
   
   ngAfterViewInit(): void {
-    console.log("***************** ngAfterViewInit() *****************");
+//    console.log("***************** ngAfterViewInit() *****************");
     // ---------------- Mostrando valores de elemento inyectado @ViewChild ----------------
 
     /* 
@@ -121,7 +121,7 @@ export class TarjetaComponent implements AfterViewInit, AfterContentInit, OnChan
   }
 
   ngAfterContentInit():void{
-    console.log("***************** ngAfterContentInit() *****************")
+//    console.log("***************** ngAfterContentInit() *****************")
     // ---------------- Mostrando valores de elemento inyectado @ContentChild ----------------
     let div:HTMLDivElement = this.elemNgContent.nativeElement;
     setTimeout(()=>this.titRelevante = div.innerText,0);

@@ -1,0 +1,23 @@
+<div class="bg-secondary rounded p-3">
+    <p class="text-white">
+        Aqu&iacute; tenemos un Contenedor
+        <span lupa>
+            con contenidos en la
+        </span>
+        plantilla que nos sirve para 
+        <span>explorar el uso de directivas</span>
+    </p>
+    <p>
+        <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" 
+                aria-expanded="false" aria-controls="collapseWidthExample" lupa>
+            Mostrar-Esconder Contenido
+        </button>
+    </p>
+    <div style="min-height: 120px;">
+        <div class="collapse collapse-horizontal" id="collapseWidthExample">
+            <div class="card card-body" style="width: 600px;">
+                <ng-content></ng-content>
+            </div>
+        </div>
+    </div>
+</div>

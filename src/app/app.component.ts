@@ -14,7 +14,10 @@ import { TogglerComponent } from './toggler/toggler.component';
 import { AcordeonComponent } from './acordeon/acordeon.component';
 import { AcordeonAvzComponent } from './acordeon-avz/acordeon-avz.component';
 import { PlantillaNgDirective } from './acordeon-avz/plantilla-ng.directive';
+import { ContenedorDemoDirectivaComponent } from './contenedor-demo-directiva/contenedor-demo-directiva.component';
 import { ContenedorDemoInyVistaComponent } from './contenedor-demo-iny-vista/contenedor-demo-iny-vista.component';
+import { LupaDirective } from './contenedor-demo-directiva/lupa.directive';
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -33,6 +36,8 @@ import { ContenedorDemoInyVistaComponent } from './contenedor-demo-iny-vista/con
     AcordeonComponent,
     AcordeonAvzComponent,
     PlantillaNgDirective,
+    ContenedorDemoDirectivaComponent,
+    LupaDirective,
     ContenedorDemoInyVistaComponent
   ],
   templateUrl: './app.component.html',
@@ -58,7 +63,9 @@ export class AppComponent {
   ejm_EnvioDeHtmlAcomponente_toggler_on              :boolean=false;
   ejr_EnvioDeHtmlAcomponente_acordeon_on             :boolean=false;
 
-  ejm_InyeccionDeElementosDOMdeVistaEnClase_on       :boolean=true;
+  ejm_AttributeDirective_on                          :boolean=true;
+
+  ejm_InyeccionDeElementosDOMdeVistaEnClase_on       :boolean=false;
 
   ejr_EnvioDeHtmlAcomponente_acordeonAvz_on          :boolean=false;
   textos:string[] = ['ejemplo de texto cualquiera', 

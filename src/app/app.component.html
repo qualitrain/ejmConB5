@@ -341,6 +341,61 @@
     </div>
   }
 
+  @if(ejm_AttributeDirective_on){
+    <div class="row gx-5">
+      <h3 class="text-success text-center mb-3">ContenedorDemoDirectiva y Lupa</h3>
+      <p class="text-secondary"> Ejemplo de uso de Attribute Directives
+      </p>
+      <div class="mt-3 col px-1">
+        <app-contenedor-demo-directiva>
+          <h3>Integración de MongoDB con Spring Boot</h3>
+          <small>
+            <p>MongoDB se puede integrar con Spring Boot de varias maneras. 
+              Aquí hay algunas de las formas más comunes:</p>
+            
+            <ol>
+              <li lupa>
+                <strong>Spring Data MongoDB:</strong> 
+                Es la forma más popular y recomendada para integrar MongoDB con Spring Boot. 
+                Spring Data MongoDB proporciona una abstracción para trabajar con MongoDB, 
+                lo que facilita la escritura de repositorios y consultas.
+              </li>
+              
+              <li>
+                <strong>MongoTemplate:</strong> 
+                Es una API de nivel inferior proporcionada por Spring Data MongoDB que te permite 
+                interactuar con MongoDB utilizando operaciones CRUD y consultas más directamente.
+              </li>
+              
+              <li>
+                <strong>Embedded MongoDB:</strong> 
+                Para pruebas unitarias y de integración, puedes usar una instancia de MongoDB 
+                incrustada en lugar de una instancia de MongoDB real.
+              </li>
+              
+              <li>
+                <strong lupa>MongoDB Reactive:</strong> 
+                Si estás construyendo una aplicación reactiva usando Spring WebFlux, puedes utilizar el 
+                soporte reactivos proporcionado por Spring Data MongoDB.
+              </li>
+              
+              <li>
+                <strong>Configuración manual:</strong> 
+                Aunque no es la forma más recomendada, siempre puedes configurar y gestionar las conexiones 
+                a MongoDB manualmente, utilizando el controlador oficial de MongoDB para Java.
+              </li>
+            </ol>
+            
+            <p lupa>Cuando integras MongoDB con Spring Boot, es común combinar las operaciones de MongoDB con 
+              otros componentes de Spring Boot, como Spring Security para la autenticación, Spring Web 
+              para exponer endpoints RESTful, y más.</p>          
+          </small>
+        </app-contenedor-demo-directiva>
+      </div>
+      <hr class="mt-3 mb-3">
+    </div>
+  }
+
   @if(ejm_InyeccionDeElementosDOMdeVistaEnClase_on){
     <div class="row gx-5">
       <h3 class="text-success text-center mb-3">ContenedorDemoInyVista y Tarjeta</h3>
