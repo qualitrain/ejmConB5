@@ -5,15 +5,29 @@ import {
           ViewChild, ViewChildren, 
           ContentChild, ContentChildren,
           QueryList, 
-          ElementRef, 
+          ElementRef,
+          Directive, 
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EsRelevanteDirective } from '../es-relevante.directive';
 
+@Directive({
+  selector: '[Accion]',
+  standalone: true
+})
+export class AccionDirective {
+  constructor(private hospedador:ElementRef){}
+
+  get elem():ElementRef{
+    return this.hospedador;
+  }
+}
+
+
 @Component({
   selector: 'app-tarjeta',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, AccionDirective],
   templateUrl: './tarjeta.component.html',
   styleUrl: './tarjeta.component.css'
 })
@@ -50,7 +64,7 @@ export class TarjetaComponent implements AfterViewInit, AfterContentInit, OnChan
 
   urlImagen:string="";
 
-  @ViewChildren("btnAccion")
+  @ViewChildren(AccionDirective)
   botonesLink!:QueryList<ElementRef>;
 
   urlsAccion:string="";
@@ -103,7 +117,7 @@ export class TarjetaComponent implements AfterViewInit, AfterContentInit, OnChan
   }
   
   ngAfterViewInit(): void {
-//    console.log("***************** ngAfterViewInit() *****************");
+    // console.log("***** TarjetaComponent.ngAfterViewInit() *****");
     // ---------------- Mostrando valores de elemento inyectado @ViewChild ----------------
 
     /* 
@@ -113,10 +127,14 @@ export class TarjetaComponent implements AfterViewInit, AfterContentInit, OnChan
     setTimeout(()=>this.urlImagen = this.elemImagen.nativeElement.src,0);
 
     // ---------------- Mostrando valores de elementos inyectados @ViewChildren ----------------
+    // console.log(this.botonesLink);
+
     let urlsBtnsAccion:string[]=[];
-    for (let elemI of this.botonesLink){
-      urlsBtnsAccion.push(elemI.nativeElement.href);
-    }
+    this.botonesLink.map( refI  => refI as unknown as AccionDirective)
+                    .map(direcI => direcI.elem.nativeElement as HTMLAnchorElement)
+                    .map( link  => link.href)
+                    .forEach( urlI => urlsBtnsAccion.push(urlI) );
+
     setTimeout(()=>this.urlsAccion = urlsBtnsAccion.join(", "),0);
   }
 

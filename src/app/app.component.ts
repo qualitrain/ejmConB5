@@ -63,9 +63,9 @@ export class AppComponent {
   ejm_EnvioDeHtmlAcomponente_toggler_on              :boolean=false;
   ejr_EnvioDeHtmlAcomponente_acordeon_on             :boolean=false;
 
-  ejm_AttributeDirective_on                          :boolean=true;
+  ejm_AttributeDirective_on                          :boolean=false;
 
-  ejm_InyeccionDeElementosDOMdeVistaEnClase_on       :boolean=false;
+  ejm_InyeccionDeElementosDOMdeVistaEnClase_on       :boolean=true;
 
   ejr_EnvioDeHtmlAcomponente_acordeonAvz_on          :boolean=false;
   textos:string[] = ['ejemplo de texto cualquiera', 
