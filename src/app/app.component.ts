@@ -17,12 +17,14 @@ import { PlantillaNgDirective } from './acordeon-avz/plantilla-ng.directive';
 import { ContenedorDemoDirectivaComponent } from './contenedor-demo-directiva/contenedor-demo-directiva.component';
 import { ContenedorDemoInyVistaComponent } from './contenedor-demo-iny-vista/contenedor-demo-iny-vista.component';
 import { LupaDirective } from './contenedor-demo-directiva/lupa.directive';
+import { ContenedorDemoHttpComponent } from './demo-http/contenedor-demo-http/contenedor-demo-http.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    CommonModule, RouterOutlet, 
+    CommonModule, 
+    RouterOutlet, 
     ListaB5Component, 
     CajasQueCambianColorComponent, 
     SeleccionadorComponent, 
@@ -38,7 +40,8 @@ import { LupaDirective } from './contenedor-demo-directiva/lupa.directive';
     PlantillaNgDirective,
     ContenedorDemoDirectivaComponent,
     LupaDirective,
-    ContenedorDemoInyVistaComponent
+    ContenedorDemoInyVistaComponent,
+    ContenedorDemoHttpComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -65,9 +68,12 @@ export class AppComponent {
 
   ejm_AttributeDirective_on                          :boolean=false;
 
-  ejm_InyeccionDeElementosDOMdeVistaEnClase_on       :boolean=true;
+  ejm_InyeccionDeElementosDOMdeVistaEnClase_on       :boolean=false;
 
   ejr_EnvioDeHtmlAcomponente_acordeonAvz_on          :boolean=false;
+
+  ejm_HttpClient_on                                  :boolean=true;
+
   textos:string[] = ['ejemplo de texto cualquiera', 
                     'otro texto cualquiera para mostrar la generación dinámica de contenido para alimentar a un componente',
                     'otro texto más (cualquiera) para mostrar la generación dinámica de contenido para alimentar a un componente'
