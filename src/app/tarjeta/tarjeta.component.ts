@@ -83,6 +83,8 @@ export class TarjetaComponent implements AfterViewInit, AfterContentInit, OnChan
   textRelevante:string="";
 
   // Inyectar elementos que correspondan con la directiva indicada
+  //  @ContentChildren(EsRelevanteDirective, {descendants: true, read: ElementRef})
+  
   @ContentChildren(EsRelevanteDirective, {descendants: true})
   elemsDirRelevantes!:QueryList<ElementRef>;
 
@@ -151,12 +153,21 @@ export class TarjetaComponent implements AfterViewInit, AfterContentInit, OnChan
 
 // ---- Mostrando valores de elementos inyectados @ContentChildren que corresponden con una directiva ----
     let textosDirRelevante:string[]=[];
-    
+    // Si usamos @ContentChildren(EsRelevanteDirective,..) -sin opcion read-
     this.elemsDirRelevantes.forEach( elemI => {
       let directivaI:EsRelevanteDirective = elemI as unknown as EsRelevanteDirective;
       textosDirRelevante.push(directivaI.elem.nativeElement.innerText);
     });
-    setTimeout( ()=>this.textosDirEsRelevante = textosDirRelevante.join(", "),0);
+    
+
+    /*
+    // Si usamos @ContentChildren(EsRelevanteDirective, {descendants: true, read: ElementRef}), leeremos al host de la directiva inyectada
+    this.elemsDirRelevantes.forEach (elemI =>{
+      textosDirRelevante.push(elemI.nativeElement.innerText);      
+    })
+    */
+
+    this.textosDirEsRelevante = textosDirRelevante.join(", ");
   }
 
 }

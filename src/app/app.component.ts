@@ -68,11 +68,11 @@ export class AppComponent {
 
   ejm_AttributeDirective_on                          :boolean=false;
 
-  ejm_InyeccionDeElementosDOMdeVistaEnClase_on       :boolean=false;
+  ejm_InyeccionDeElementosDOMdeVistaEnClase_on       :boolean=true;
 
   ejr_EnvioDeHtmlAcomponente_acordeonAvz_on          :boolean=false;
 
-  ejm_HttpClient_on                                  :boolean=true;
+  ejm_HttpClient_on                                  :boolean=false;
 
   textos:string[] = ['ejemplo de texto cualquiera', 
                     'otro texto cualquiera para mostrar la generación dinámica de contenido para alimentar a un componente',
