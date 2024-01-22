@@ -18,6 +18,7 @@ import { ContenedorDemoDirectivaComponent } from './contenedor-demo-directiva/co
 import { ContenedorDemoInyVistaComponent } from './contenedor-demo-iny-vista/contenedor-demo-iny-vista.component';
 import { LupaDirective } from './contenedor-demo-directiva/lupa.directive';
 import { ContenedorDemoHttpComponent } from './demo-http/contenedor-demo-http/contenedor-demo-http.component';
+import { ConsultaPersonasComponent } from './consulta-personas/consulta-personas.component';
 
 @Component({
   selector: 'app-root',
@@ -41,6 +42,8 @@ import { ContenedorDemoHttpComponent } from './demo-http/contenedor-demo-http/co
     ContenedorDemoDirectivaComponent,
     LupaDirective,
     ContenedorDemoInyVistaComponent,
+    ConsultaPersonasComponent,
+    
     ContenedorDemoHttpComponent
   ],
   templateUrl: './app.component.html',
@@ -66,11 +69,14 @@ export class AppComponent {
   ejm_EnvioDeHtmlAcomponente_toggler_on              :boolean=false;
   ejr_EnvioDeHtmlAcomponente_acordeon_on             :boolean=false;
 
+  //Inyección desde la vista y desde el html recibido por el componente
   ejm_AttributeDirective_on                          :boolean=false;
-
-  ejm_InyeccionDeElementosDOMdeVistaEnClase_on       :boolean=true;
-
+  ejm_InyeccionDeElementosDOMdeVistaEnClase_on       :boolean=false;
   ejr_EnvioDeHtmlAcomponente_acordeonAvz_on          :boolean=false;
+
+  //Servicios e Inyección de dependencias
+  ejm_InyeccionDependencias2_Instances1service_on    :boolean=true;
+
 
   ejm_HttpClient_on                                  :boolean=false;
 
