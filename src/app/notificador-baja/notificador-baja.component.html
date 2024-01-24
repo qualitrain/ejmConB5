@@ -1,0 +1,9 @@
+@if(nBajas > 0){
+    <button type="button" class="btn btn-primary m-2" 
+            (click)="mostrarBajas ? mostrarBajas=false:mostrarBajas=true">
+        Bajas <span class="badge bg-light text-dark">{{nBajas}}</span>
+    </button>
+}
+@if(mostrarBajas){
+    <span class="texto-peque text-primary">{{bajas}}</span>
+}

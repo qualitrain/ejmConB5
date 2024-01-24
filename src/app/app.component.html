@@ -522,40 +522,59 @@
           <app-contenedor-demo-jerar-iny></app-contenedor-demo-jerar-iny>
         </div>
       </div>
-    <div class="text-info text-muted mt-3 text-info text-justify">
-      <small>
-          Ejemplo de <strong class="text-danger">servicio que es inyectado a nivel 
-          aplicaci&oacute;n, m&oacute;dulo, componente y componente anidado
-          </strong>.<br>
-          <ul>
-              <li>
-                  Hay <strong>dos servicios</strong> que implementan  <i class="text-primary">IServDatPersonas</i>:
-                  <i class="text-primary">ProvDatPersonasService</i> y <i class="text-primary">Prov2DatPersonasService</i>
-              </li>
-              <li>
-                  Los servicio est&aacute;n decorados con <code class="font-weight-bold">&#64;Injectable(&#123; providedIn: 'root'&#125;)</code>, 
-                  que indica que debe haber <strong>una instacia por aplicaci&oacute;n</strong>.
-              </li>
-              <li>
-                  Hay un componente <i class="text-primary">contenedor</i> que <strong>anida dos instancias</strong> 
-                  del componente <i class="text-primary">consulta-personas</i>.
-              </li>
-              <li>
-                  <strong>Se definen providers</strong> en <i class="text-primary">AppModule</i>, 
-                  <i class="text-primary">ContenedorComponent</i> y <i class="text-primary">ConsultaPersonasComponent</i> 
-                  para <strong>probar la jerarqu&iacute;a de Inyecci&oacute;n</strong>  de dependencias
-              </li>
-              <li>
-                  Se prueba la <strong>inyecci&oacute;n de una implementaci&oacute;n en particular</strong> agregando
-                  a  <i>providers</i> lo siguiente: <code class="font-weight-bold">
-                  providers: [&#123; provide:ProvDatPersonasService, useClass:Prov2DatPersonasService&#125; ]</code>. El campo <code>provide</code>
-                  especifica <strong>el tipo</strong> y el campo <code>useClass</code>, <strong>la implementaci&oacute;n</strong> deseada.          
-              </li>
-          </ul>
-      </small>
+      <div class="text-info text-muted mt-3 text-info text-justify">
+        <small>
+            Ejemplo de <strong class="text-danger">servicio que es inyectado a nivel 
+            aplicaci&oacute;n, m&oacute;dulo, componente y componente anidado
+            </strong>.<br>
+            <ul>
+                <li>
+                    Hay <strong>dos servicios</strong> que implementan  <i class="text-primary">IServDatPersonas</i>:
+                    <i class="text-primary">ProvDatPersonasService</i> y <i class="text-primary">Prov2DatPersonasService</i>
+                </li>
+                <li>
+                    Los servicio est&aacute;n decorados con <code class="font-weight-bold">&#64;Injectable(&#123; providedIn: 'root'&#125;)</code>, 
+                    que indica que debe haber <strong>una instacia por aplicaci&oacute;n</strong>.
+                </li>
+                <li>
+                    Hay un componente <i class="text-primary">contenedor</i> que <strong>anida dos instancias</strong> 
+                    del componente <i class="text-primary">consulta-personas</i>.
+                </li>
+                <li>
+                    <strong>Se definen providers</strong> en <i class="text-primary">AppModule</i>, 
+                    <i class="text-primary">ContenedorComponent</i> y <i class="text-primary">ConsultaPersonasComponent</i> 
+                    para <strong>probar la jerarqu&iacute;a de Inyecci&oacute;n</strong>  de dependencias
+                </li>
+                <li>
+                    Se prueba la <strong>inyecci&oacute;n de una implementaci&oacute;n en particular</strong> agregando
+                    a  <i>providers</i> lo siguiente: <code class="font-weight-bold">
+                    providers: [&#123; provide:ProvDatPersonasService, useClass:Prov2DatPersonasService&#125; ]</code>. El campo <code>provide</code>
+                    especifica <strong>el tipo</strong> y el campo <code>useClass</code>, <strong>la implementaci&oacute;n</strong> deseada.          
+                </li>
+            </ul>
+        </small>
+      </div>
+      <hr class="mt-3 mb-3">
     </div>
-    <hr class="mt-3 mb-3">
-  </div>
+  }
+
+  @if(ejm_ServicioComoMotorDeCoreografia_on){
+    <div class="row gx-5">
+      <h3 class="text-success text-center mb-3">
+        ContenedorDemoMotorCoreo, ConsultaPersonas (dos instancias) y servicios ProvDatPersonaMockService y ProvDatPersonaMock2Service
+      </h3>
+      <p class="text-secondary"> Ejemplo de Servicio como Motor de Coreografía
+      </p>
+      <div class="row  mt-4">
+        <div class="col-sm-12">
+          <app-contenedor-demo-motor-coreo notificarBajas="true"></app-contenedor-demo-motor-coreo>
+        </div>
+      </div>
+
+      <div class="text-info text-muted mt-3 text-info text-justify">
+      </div>
+      <hr class="mt-3 mb-3">
+    </div>
   }
 
   @if(ejm_HttpClient_on){

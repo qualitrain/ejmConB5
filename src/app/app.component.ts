@@ -20,6 +20,7 @@ import { LupaDirective } from './contenedor-demo-directiva/lupa.directive';
 import { ContenedorDemoHttpComponent } from './demo-http/contenedor-demo-http/contenedor-demo-http.component';
 import { ConsultaPersonasComponent } from './consulta-personas/consulta-personas.component';
 import { ContenedorDemoJerarInyComponent } from './contenedor-demo-jerar-iny/contenedor-demo-jerar-iny.component';
+import { ContenedorDemoMotorCoreoComponent } from './contenedor-demo-motor-coreo/contenedor-demo-motor-coreo.component';
 
 @Component({
   selector: 'app-root',
@@ -45,6 +46,7 @@ import { ContenedorDemoJerarInyComponent } from './contenedor-demo-jerar-iny/con
     ContenedorDemoInyVistaComponent,
     ConsultaPersonasComponent,
     ContenedorDemoJerarInyComponent,
+    ContenedorDemoMotorCoreoComponent,
     
     ContenedorDemoHttpComponent
   ],
@@ -77,8 +79,9 @@ export class AppComponent {
   ejr_EnvioDeHtmlAcomponente_acordeonAvz_on          :boolean=false;
 
   //Servicios e Inyección de dependencias
-  ejm_InyeccionDependencias2_Instances1service_on    :boolean=true;
+  ejm_InyeccionDependencias2_Instances1service_on    :boolean=false;
   ejm_JerarquiaDeInyeccion_on                        :boolean=true;
+  ejm_ServicioComoMotorDeCoreografia_on              :boolean=true;
 
 
 
