@@ -19,6 +19,7 @@ import { ContenedorDemoInyVistaComponent } from './contenedor-demo-iny-vista/con
 import { LupaDirective } from './contenedor-demo-directiva/lupa.directive';
 import { ContenedorDemoHttpComponent } from './demo-http/contenedor-demo-http/contenedor-demo-http.component';
 import { ConsultaPersonasComponent } from './consulta-personas/consulta-personas.component';
+import { ContenedorDemoJerarInyComponent } from './contenedor-demo-jerar-iny/contenedor-demo-jerar-iny.component';
 
 @Component({
   selector: 'app-root',
@@ -43,6 +44,7 @@ import { ConsultaPersonasComponent } from './consulta-personas/consulta-personas
     LupaDirective,
     ContenedorDemoInyVistaComponent,
     ConsultaPersonasComponent,
+    ContenedorDemoJerarInyComponent,
     
     ContenedorDemoHttpComponent
   ],
@@ -76,6 +78,8 @@ export class AppComponent {
 
   //Servicios e Inyección de dependencias
   ejm_InyeccionDependencias2_Instances1service_on    :boolean=true;
+  ejm_JerarquiaDeInyeccion_on                        :boolean=true;
+
 
 
   ejm_HttpClient_on                                  :boolean=false;
