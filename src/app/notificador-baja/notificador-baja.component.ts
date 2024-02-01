@@ -18,7 +18,7 @@ export class NotificadorBajaComponent {
   listaBajas:string[]=[];
   bajas:string="";
   mostrarBajas:boolean=false;
-
+ 
   constructor(private motorEventos:ProvDatPersonaMockService){
     motorEventos.notificador
                 .subscribe(bajaI => this.procesarBaja(bajaI) )

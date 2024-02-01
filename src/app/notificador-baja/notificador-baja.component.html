@@ -1,6 +1,12 @@
 @if(nBajas > 0){
     <button type="button" class="btn btn-primary m-2" 
             (click)="mostrarBajas ? mostrarBajas=false:mostrarBajas=true">
+        @if(mostrarBajas){ 
+            Ocultar 
+        }
+        @else {
+            Mostrar 
+        }
         Bajas <span class="badge bg-light text-dark">{{nBajas}}</span>
     </button>
 }
