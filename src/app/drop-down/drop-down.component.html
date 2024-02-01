@@ -1,0 +1,14 @@
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="{{id}}" 
+            data-bs-toggle="dropdown" aria-expanded="false">
+      {{nombreBoton}} ({{nInstancia}})
+    </button>
+    <div class="dropdown-menu" [attr.aria-labelledby]="id" >
+      @for(opcionI of  nomOpciones; track i; let i=$index){
+          <a class="dropdown-item" href="{{ hRefOpciones[i] }}" 
+           (click)="publicarEleccion(opcionI)">{{opcionI}}</a>
+      } 
+      <hr class="dropdown-divider">
+      <span class="dropdown-item" >{{nombreServicio}}</span> 
+    </div>
+  </div>
