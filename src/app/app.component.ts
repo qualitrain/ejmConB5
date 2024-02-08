@@ -84,10 +84,9 @@ export class AppComponent {
   //Servicios e Inyección de dependencias
   ejm_InyeccionDependencias2_Instances1service_on    :boolean=false;
   ejm_JerarquiaDeInyeccion_on                        :boolean=false;
-  ejm_ServicioComoMotorDeCoreografia_on              :boolean=false;
+  ejm_ServicioComoMotorDeCoreografia_on              :boolean=true;
   ejm_HerenciaDeServiciosYuseExisting_on             :boolean=true;
-  ejm_PersonalizandoBusquedaDeInyectoresOn           :boolean=true;
-
+  ejm_PersonalizandoBusquedaDeInyectoresOn           :boolean=true; 
 
 
   ejm_HttpClient_on                                  :boolean=false;
