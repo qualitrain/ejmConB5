@@ -22,6 +22,7 @@ import { ConsultaPersonasComponent } from './consulta-personas/consulta-personas
 import { ContenedorDemoJerarInyComponent } from './contenedor-demo-jerar-iny/contenedor-demo-jerar-iny.component';
 import { ContenedorDemoMotorCoreoComponent } from './contenedor-demo-motor-coreo/contenedor-demo-motor-coreo.component';
 import { DropDownComponent } from './drop-down/drop-down.component';
+import { CajaDemoHostComponent } from './caja-demo-host/caja-demo-host.component';
 
 @Component({
   selector: 'app-root',
@@ -49,7 +50,7 @@ import { DropDownComponent } from './drop-down/drop-down.component';
     ContenedorDemoJerarInyComponent,
     ContenedorDemoMotorCoreoComponent,
     DropDownComponent,
-    
+    CajaDemoHostComponent,
     ContenedorDemoHttpComponent
   ],
   templateUrl: './app.component.html',
@@ -85,6 +86,8 @@ export class AppComponent {
   ejm_JerarquiaDeInyeccion_on                        :boolean=false;
   ejm_ServicioComoMotorDeCoreografia_on              :boolean=false;
   ejm_HerenciaDeServiciosYuseExisting_on             :boolean=true;
+  ejm_PersonalizandoBusquedaDeInyectoresOn           :boolean=true;
+
 
 
   ejm_HttpClient_on                                  :boolean=false;

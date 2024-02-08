@@ -580,7 +580,11 @@
   @if(ejm_HerenciaDeServiciosYuseExisting_on){
     <div class="row gx-5">
       <h3 class="text-success text-center mb-3">
-        DropDown y servicios IGestorOpcionesService, GestorOpcionesDemoIDService, GestorOpcionesLibroService
+        DropDown 
+        <span class="text-secondary">y servicios</span>
+         IGestorOpcionesService 
+        <span class="text-secondary">(abstracto),</span> 
+        GestorOpcionesDemoIDService, GestorOpcionesLibroService
       </h3>
       <p class="text-secondary"> Ejemplo de componente que usa una implementación u otra de un mismo servicio.
       </p>
@@ -590,11 +594,95 @@
         </div>
     </div>
 
-      <div class="text-info text-muted mt-3 text-info text-justify">
-      </div>
-      <hr class="mt-3 mb-3">
+    <div class="text-info text-muted mt-3 text-info text-justify">
+      <small>
+        Ejemplo de componente que <strong class="text-danger">usa una implementaci&oacute;n u otra
+            de un mismo servicio 
+        </strong>.<br>
+        <ul>
+            <li>
+                Inyecta un <strong>servicio abstracto y configura la implementaci&oacute;n
+                a utilizar</strong>, como una referencia a un servicio publicado en un inyector root, utilizando
+                <i class="text-primary">useExisting</i> en <i class="text-primary">providers</i>
+            </li>
+            <li>
+                Esta estrategia suele usarse cuando se desea <strong>estrechar la visibilidad</strong> del componente 
+                <strong>sobre los m&eacute;todos que ofrece un servicio</strong> inyectado en &eacute;l. 
+            </li>
+        </ul>
+      </small>
     </div>
+    <hr class="mt-3 mb-3">
+  </div>
   }
+
+  @if(ejm_PersonalizandoBusquedaDeInyectoresOn){
+    <div class="row"  id="InDep04">
+        <h5 class="text-primary">Personalizando la B&uacute;squeda de Inyectores: Componentes 
+            <pre class="d-inline">drop-down</pre>,  
+            <pre class="d-inline">caja-demo-host</pre>,  
+                y servicios 
+            <pre class="d-inline">GestorOpcionesLibro</pre>, 
+            <pre class="d-inline">GestorOpcionesDemoID</pre> y
+            <pre class="d-inline">GestorOpcionesAnimal</pre> 
+        </h5>
+    </div>
+    <div class="mt-4">
+        <div class="d-inline-block">
+            <app-drop-down></app-drop-down>
+        </div>
+        <div class="ms-1 mb-1 d-inline-block">
+            <app-caja-demo-host>
+                <app-drop-down></app-drop-down>
+            </app-caja-demo-host>
+        </div>
+        <div class="ms-1 d-inline-block">
+            <app-caja-demo-host>
+                <app-drop-down></app-drop-down>
+            </app-caja-demo-host>
+        </div>
+        <div class="ms-1 d-inline-block">
+            <app-caja-demo-host>
+                <app-drop-down></app-drop-down>
+            </app-caja-demo-host>
+        </div>
+    </div>
+        
+    <div class="text-info text-muted mt-3 text-info text-justify">
+      <small>
+        Demo de <strong class="text-danger">personalización de b&uacute;squeda de inyectores 
+         </strong>.<br>
+        <ul>
+            <li>
+                Se crean 3 instancias de un componente que anida un bot&oacute;n DropDown y proyecta otro
+            </li>
+            <li>
+                Modifica el componente drop-down con decoradores en la inyecci&oacute;n de su servicio de datos: 
+                <i class="text-primary">&#64;Host</i>, <i class="text-primary">&#64;SkipSelf</i> y <i class="text-primary">&#64;Optional</i>.
+            </li>
+            <li>
+                <i class="text-primary">&#64;Host </i>  <strong>termina</strong> la b&uacute;squeda en el elemento Host (el componente en donde se da la inyecci&oacute;n o
+                el elemento contenedor en el caso de proyección)
+            </li>
+            <li>
+                <i class="text-primary">&#64;SkipSelf </i>  <strong>inicia</strong> la b&uacute;squeda en el siguiente elemento superior
+                al componente en donde se da la inyecci&oacute;n
+            </li>
+            <li>
+                El demo est&aacute; listo para que se comenten y descomenten decoraciones y providers a fin de comprender
+                el efecto del uso de decoradores de personalizaci&oacute;n de b&uacute;squeda de inyectores.
+            </li>
+            <li>
+                Se agreg&oacute; un arreglo <i class="text-primary">viewProviders</i> al componente caja-demo-host para tener distintos contenidos
+                en los dropdowns seg&uacute;n sea cada uno, anidado o proyectado 
+            </li>
+        </ul>
+      </small>
+
+    </div>
+    <hr class="mt-3 mb-3">
+}
+
 
   @if(ejm_HttpClient_on){
     <div class="row gx-5">

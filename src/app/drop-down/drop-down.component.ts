@@ -12,7 +12,7 @@ import { GestorOpcionesDemoIDService } from "../servicios/GestorOpcionesDemoID.s
   styleUrl: './drop-down.component.css',
 //  providers:[GestorOpcionesDemoIDService]
 //  providers:[{provide:IGestorOpcionesService,useExisting:GestorOpcionesLibroService}]
-providers:[{provide:IGestorOpcionesService,useExisting:GestorOpcionesDemoIDService}]
+  providers:[{provide:IGestorOpcionesService,useExisting:GestorOpcionesDemoIDService}]
 //  providers:[{provide:GestorOpcionesDemoIDService,useClass:GestorOpcionesLibroService}]
 })
 export class DropDownComponent {
