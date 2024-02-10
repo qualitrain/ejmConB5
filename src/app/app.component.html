@@ -616,7 +616,7 @@
   </div>
   }
 
-  @if(ejm_PersonalizandoBusquedaDeInyectoresOn){
+  @if(ejm_PersonalizandoBusquedaDeInyectores_on){
     <div class="row"  id="InDep04">
         <h5 class="text-primary">Personalizando la B&uacute;squeda de Inyectores: Componentes 
             <pre class="d-inline">drop-down</pre>,  
@@ -683,7 +683,7 @@
     <hr class="mt-3 mb-3">
   }
 
-  @if(ejm_InyectorPersonalizadoOn){
+  @if(ejm_InyectorPersonalizado_on){
     <div class="row"  id="InDep04">
       <h5 class="text-primary">Inyectores personalizados: Componente 
           <pre class="d-inline text-success">titulo</pre>  
@@ -716,9 +716,39 @@
           </ul>
       </small>
     </div>
+    <hr class="my-4">
+  }
 
-  <hr class="my-4">
-
+  @if(ejm_IntroduccionAlosObservablesYelRxJs_on){
+      <div class="row">
+          <h5 class="text-primary">Introducci&oacute;n a Observables y RxJs: Componente 
+              <pre class="d-inline">test-rxjs01</pre> 
+          </h5>
+      </div>
+      <div class="row justify-content-center mt-4">
+          <div class="col-sm-10">
+              <app-test-rxjs01></app-test-rxjs01>
+          </div>
+      </div>
+      <div class="text-info text-muted mt-3 text-info text-justify mt-5">
+          <small>
+              <ul>
+                  <li>
+                      Se <strong>crea un <i class="text-primary">observable</i> sobre los clicks de un bot&oacute;n</strong>
+                  </li>
+                  <li>
+                      Se <strong>genera una suscripci&oacute;n sobre el observable</strong>. La suscripci&oacute;n 
+                      cuenta los clicks. El contador se muestra en el componente.
+                  </li>
+                  <li>
+                      Se puede <strong>cancelar la suscripci&oacute;n</strong> usando el bot&oacute;n correspondiente
+                  </li>
+              </ul>
+          </small>
+      </div>
+   
+      <hr class="my-4">
+  
   }
 
   @if(ejm_HttpClient_on){
