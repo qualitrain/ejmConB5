@@ -26,6 +26,7 @@ import { CajaDemoHostComponent } from './caja-demo-host/caja-demo-host.component
 import { TituloComponent } from './titulo/titulo.component';
 import { CajaDemoInyectorComponent } from './caja-demo-inyector/caja-demo-inyector.component';
 import { TestRxjs01Component } from './demo-rxjs/test-rxjs01/test-rxjs01.component';
+import { TestRxjs02Component } from './demo-rxjs/test-rxjs02/test-rxjs02.component';
 
 @Component({
   selector: 'app-root',
@@ -57,6 +58,7 @@ import { TestRxjs01Component } from './demo-rxjs/test-rxjs01/test-rxjs01.compone
     TituloComponent,
     CajaDemoInyectorComponent,
     TestRxjs01Component,
+    TestRxjs02Component,
 
     ContenedorDemoHttpComponent
   ],
@@ -91,13 +93,14 @@ export class AppComponent {
   //Servicios e Inyección de dependencias
   ejm_InyeccionDependencias2_Instances1service_on    :boolean=false;
   ejm_JerarquiaDeInyeccion_on                        :boolean=false;
-  ejm_ServicioComoMotorDeCoreografia_on              :boolean=true;
-  ejm_HerenciaDeServiciosYuseExisting_on             :boolean=true;
-  ejm_PersonalizandoBusquedaDeInyectores_on          :boolean=true;
-  ejm_InyectorPersonalizado_on                       :boolean=true; 
+  ejm_ServicioComoMotorDeCoreografia_on              :boolean=false;
+  ejm_HerenciaDeServiciosYuseExisting_on             :boolean=false;
+  ejm_PersonalizandoBusquedaDeInyectores_on          :boolean=false;
+  ejm_InyectorPersonalizado_on                       :boolean=false; 
 
   //RxJs
   ejm_IntroduccionAlosObservablesYelRxJs_on          :boolean=true; //test-rxjs01
+  ejm_FuncBasicasCrearObservablesAdaptadores_on      :boolean=true; //test-rxjs02
 
   ejm_HttpClient_on                                  :boolean=false;
 
