@@ -106,7 +106,7 @@ export class AppComponent {
   //RxJs
   ejm_IntroduccionAlosObservablesYelRxJs_on          :boolean=false; //test-rxjs01
   ejm_FuncBasicasCrearObservablesAdaptadores_on      :boolean=false; //test-rxjs02
-  ejm_FuncionBindCallback_on                         :boolean=true; //test-rxjs03
+  ejm_FuncionBindCallback_on                         :boolean=false; //test-rxjs03
 
   //Ruteo
   ejm_Ruteo_basico_on                                :boolean=true;
