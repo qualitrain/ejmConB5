@@ -23,8 +23,20 @@ export class PagNoExisteComponent  implements OnInit{
   }
 
   procesarUrl(fragsUrl:UrlSegment[]){
-    this.rutaNoSoportada = "/" + fragsUrl.map(frI => frI.path)
+    let parent = this.getUrlParent();
+    this.rutaNoSoportada += "/" + parent + fragsUrl.map(frI => frI.path)
                                          .join("/");
+  }
+
+  getUrlParent():string{ // No recursiva !
+    let parent:string | undefined = this.rutaActiva.parent?.snapshot.url.map(frI => frI.path).join("/");
+    if(parent){
+      parent +="/";
+    }
+    else
+      parent ="";
+
+    return parent
   }
 
   irAlaRaiz(){
