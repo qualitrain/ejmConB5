@@ -28,6 +28,7 @@ import { CajaDemoInyectorComponent } from './caja-demo-inyector/caja-demo-inyect
 import { TestRxjs01Component } from './demo-rxjs/test-rxjs01/test-rxjs01.component';
 import { TestRxjs02Component } from './demo-rxjs/test-rxjs02/test-rxjs02.component';
 import { TestRxjs03Component } from './demo-rxjs/test-rxjs03/test-rxjs03.component';
+import { TestRxjs04Component } from './demo-rxjs/test-rxjs04/test-rxjs04.component';
 import { CajaRuteoComponent } from './demo-ruteo/caja-ruteo/caja-ruteo.component';
 
 @Component({
@@ -62,6 +63,7 @@ import { CajaRuteoComponent } from './demo-ruteo/caja-ruteo/caja-ruteo.component
     TestRxjs01Component,
     TestRxjs02Component,
     TestRxjs03Component,
+    TestRxjs04Component,
 
     CajaRuteoComponent,
 
@@ -101,15 +103,16 @@ export class AppComponent {
   ejm_ServicioComoMotorDeCoreografia_on              :boolean=false;
   ejm_HerenciaDeServiciosYuseExisting_on             :boolean=false;
   ejm_PersonalizandoBusquedaDeInyectores_on          :boolean=false;
-  ejm_InyectorPersonalizado_on                       :boolean=false; 
+  ejm_InyectorPersonalizado_on                       :boolean=false;
 
   //RxJs
   ejm_IntroduccionAlosObservablesYelRxJs_on          :boolean=false; //test-rxjs01
   ejm_FuncBasicasCrearObservablesAdaptadores_on      :boolean=false; //test-rxjs02
   ejm_FuncionBindCallback_on                         :boolean=false; //test-rxjs03
+  ejm_PipelineEnRxJs_on                              :boolean=true; // test-rxjs04
 
   //Ruteo
-  ejm_Ruteo_basico_on                                :boolean=true;
+  ejm_Ruteo_basico_on                                :boolean=false;
 
   ejm_HttpClient_on                                  :boolean=false;
 

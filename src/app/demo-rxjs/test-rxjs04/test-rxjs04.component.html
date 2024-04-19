@@ -1,0 +1,24 @@
+<div class="row" >
+    <p class="col-9 mb-1">¿ En qu&eacute; mes desea tomar sus vacaciones ?
+    </p>
+    <p class="col-3 mb-2 text-right">
+        <span class="badge bg-danger">Temporada Alta</span> <br>
+        <span class="badge bg-secondary">Temporada Baja</span><br>
+    </p>
+    <div id="idDivMeses" class="bg-secondary bg-opacity-50 p-2 rounded">
+        @for(mesI of meses; track i; let i=$index){
+            <span [class.bg-danger]="mesesTemporadaAlta.includes(mesI)"
+                  [class.bg-secondary]="!mesesTemporadaAlta.includes(mesI)"
+            class="badge me-1 mt-3 py-2 badgeMes" >{{mesI}}</span>
+        }
+    </div>
+</div>
+@if(temporadaBaja){
+    <div class="row bg-light ps-2">
+        <p class="text-success mt-3">Aproveche nuestras 
+            <span class="badge bg-success">promociones</span>
+             de temporada baja, en 
+            <span class="badge bg-success">{{mesElegido}}</span>
+        </p>
+    </div>
+}
