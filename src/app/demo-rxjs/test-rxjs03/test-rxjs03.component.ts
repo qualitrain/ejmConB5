@@ -33,6 +33,7 @@ export class TestRxjs03Component implements AfterViewInit{
   ngAfterViewInit(): void {
     this.divResultados = document.getElementById("divResultadosRxjs03") as HTMLElement;
 
+    //bindCallback devuelve una funcion que devuelve un observable 
     bindCallback(funcionAsincrona)(20,0)
             .subscribe( (n:any)=>console.log(console.log(`Resultado ${n.nInvoc} = ${n.resul}`)) );
 
