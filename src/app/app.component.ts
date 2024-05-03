@@ -31,7 +31,7 @@ import { TestRxjs03Component } from './demo-rxjs/test-rxjs03/test-rxjs03.compone
 import { TestRxjs04Component } from './demo-rxjs/test-rxjs04/test-rxjs04.component';
 import { CajaRuteoComponent } from './demo-ruteo/caja-ruteo/caja-ruteo.component';
 
-import { EnsayIntervalComponent } from './demo-ruteo/ensay-interval/ensay-interval.component';
+import { EnsayIntervalComponent } from './demo-rxjs/ensay-interval/ensay-interval.component';
 
 @Component({
   selector: 'app-root',
