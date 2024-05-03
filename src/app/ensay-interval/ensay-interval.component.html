@@ -1,0 +1,8 @@
+<div>
+    <button class="btn btn-primary" (click)="arrancarConteo()">Arranca conteo</button>
+    <div id="divContadores" class="mt-4 bg-secondary rounded p-3">
+        @for(numI of numeros; track numI){
+            <span class="ps-4 text-white">{{numI}}</span>
+        }
+    </div>
+</div>
