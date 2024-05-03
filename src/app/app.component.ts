@@ -32,6 +32,7 @@ import { TestRxjs04Component } from './demo-rxjs/test-rxjs04/test-rxjs04.compone
 import { CajaRuteoComponent } from './demo-ruteo/caja-ruteo/caja-ruteo.component';
 
 import { EnsayIntervalComponent } from './demo-rxjs/ensay-interval/ensay-interval.component';
+import { TestRxjs05Component } from './demo-rxjs/test-rxjs05/test-rxjs05.component';
 
 @Component({
   selector: 'app-root',
@@ -67,6 +68,7 @@ import { EnsayIntervalComponent } from './demo-rxjs/ensay-interval/ensay-interva
     TestRxjs03Component,
     TestRxjs04Component,
     EnsayIntervalComponent,
+    TestRxjs05Component,
 
     CajaRuteoComponent,
 
@@ -110,11 +112,12 @@ export class AppComponent {
 
   //RxJs
   ejm_IntroduccionAlosObservablesYelRxJs_on          :boolean=false; //test-rxjs01
-  experimento_interval_on                            :boolean=true; //ensay-interval
+  experimento_interval_on                            :boolean=false; //ensay-interval
   ejm_FuncBasicasCrearObservablesAdaptadores_on      :boolean=false; //test-rxjs02
   ejm_FuncionBindCallback_on                         :boolean=false; //test-rxjs03
   ejm_PipelineEnRxJs_on                              :boolean=false; //test-rxjs04
 
+  ejm_MasFuncionesCreadorasEnRxJs_on                 :boolean=true; // test-rxjs05
 
   //Ruteo
   ejm_Ruteo_basico_on                                :boolean=false;
