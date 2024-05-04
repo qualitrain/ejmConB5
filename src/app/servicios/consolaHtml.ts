@@ -10,7 +10,9 @@ export class ConsolaHtml{
     constructor(){ }
 
     setElemHost(hostConsola:HTMLElement){
+ //       console.log("ConsolaHtml.setElemHost()")
         this.elemHost = hostConsola;
+ //       console.log(this.elemHost);
     }
 
     setColorResaltado(color:string){

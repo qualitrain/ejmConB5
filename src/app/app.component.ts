@@ -34,6 +34,7 @@ import { CajaRuteoComponent } from './demo-ruteo/caja-ruteo/caja-ruteo.component
 import { EnsayIntervalComponent } from './demo-rxjs/ensay-interval/ensay-interval.component';
 import { TestRxjs05Component } from './demo-rxjs/test-rxjs05/test-rxjs05.component';
 import { TestRxjs06Component } from './demo-rxjs/test-rxjs06/test-rxjs06.component';
+import { TestRxjs07Component } from './demo-rxjs/test-rxjs07/test-rxjs07.component';
 
 @Component({
   selector: 'app-root',
@@ -71,6 +72,7 @@ import { TestRxjs06Component } from './demo-rxjs/test-rxjs06/test-rxjs06.compone
     EnsayIntervalComponent,
     TestRxjs05Component,
     TestRxjs06Component,
+    TestRxjs07Component,
 
     CajaRuteoComponent,
 
@@ -121,7 +123,7 @@ export class AppComponent {
 
   ejm_MasFuncionesCreadorasEnRxJs_on                 :boolean=true; // test-rxjs05
   ejm_OperadoresFiltradoFilteryMap_on                :boolean=true; //test-rxjs06
-
+  ejm_OperadoresFiltradoPorPosicion_on               :boolean=true; //test-rxjs07
   //Ruteo
   ejm_Ruteo_basico_on                                :boolean=false;
 
