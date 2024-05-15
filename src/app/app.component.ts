@@ -32,6 +32,7 @@ import { TestRxjs04Component } from './demo-rxjs/test-rxjs04/test-rxjs04.compone
 import { CajaRuteoComponent } from './demo-ruteo/caja-ruteo/caja-ruteo.component';
 
 import { EnsayIntervalComponent } from './demo-rxjs/ensay-interval/ensay-interval.component';
+import { EnsayPipeComponent } from './demo-rxjs/ensay-pipe/ensay-pipe.component';
 import { TestRxjs05Component } from './demo-rxjs/test-rxjs05/test-rxjs05.component';
 import { TestRxjs06Component } from './demo-rxjs/test-rxjs06/test-rxjs06.component';
 import { TestRxjs07Component } from './demo-rxjs/test-rxjs07/test-rxjs07.component';
@@ -70,6 +71,7 @@ import { TestRxjs07Component } from './demo-rxjs/test-rxjs07/test-rxjs07.compone
     TestRxjs03Component,
     TestRxjs04Component,
     EnsayIntervalComponent,
+    EnsayPipeComponent,
     TestRxjs05Component,
     TestRxjs06Component,
     TestRxjs07Component,
@@ -118,12 +120,13 @@ export class AppComponent {
   ejm_IntroduccionAlosObservablesYelRxJs_on          :boolean=false; //test-rxjs01
   experimento_interval_on                            :boolean=false; //ensay-interval
   ejm_FuncBasicasCrearObservablesAdaptadores_on      :boolean=false; //test-rxjs02
+  experimento_pipe_on                                :boolean=true; //ensay-pipe
   ejm_FuncionBindCallback_on                         :boolean=false; //test-rxjs03
-  ejm_PipelineEnRxJs_on                              :boolean=false; //test-rxjs04
+  ejm_PipelineEnRxJs_on                              :boolean=true; //test-rxjs04
 
-  ejm_MasFuncionesCreadorasEnRxJs_on                 :boolean=true; // test-rxjs05
-  ejm_OperadoresFiltradoFilteryMap_on                :boolean=true; //test-rxjs06
-  ejm_OperadoresFiltradoPorPosicion_on               :boolean=true; //test-rxjs07
+  ejm_MasFuncionesCreadorasEnRxJs_on                 :boolean=false; // test-rxjs05
+  ejm_OperadoresFiltradoFilteryMap_on                :boolean=false; //test-rxjs06
+  ejm_OperadoresFiltradoPorPosicion_on               :boolean=false; //test-rxjs07
   //Ruteo
   ejm_Ruteo_basico_on                                :boolean=false;
 

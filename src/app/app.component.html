@@ -839,6 +839,21 @@
   </div>
   }
 
+  @if(experimento_interval_on){
+    <div class="mt-4 ">
+      <app-ensay-interval></app-ensay-interval>
+      <hr class="my-4">
+    </div>
+  }
+  
+  @if(experimento_pipe_on){
+    <div class="mt-4 ">
+      <app-ensay-pipe></app-ensay-pipe>
+      <hr class="my-4">
+    </div>
+  }
+
+
   @if(ejm_PipelineEnRxJs_on){
     <div class="row">
       <h5 class="text-primary">Pipeline en RxJs : Componente
@@ -883,12 +898,6 @@
   </div>
 
   <hr class="my-4">
-  }
-  @if(experimento_interval_on){
-    <div class="mt-4 ">
-      <app-ensay-interval></app-ensay-interval>
-      <hr class="my-4">
-    </div>
   }
 
   @if(ejm_MasFuncionesCreadorasEnRxJs_on){
